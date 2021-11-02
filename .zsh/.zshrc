@@ -72,3 +72,12 @@ compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Exports {{{1
+export EDITOR=/opt/homebrew/bin/vim
+export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD 2> /dev/null || fd . -HI)'
+export FZF_DEFAULT_OPTS="--color=hl:120,gutter:35,\
+pointer:220,hl+:118,fg:251,fg+:bright-blue,\
+marker:196,border:214,prompt:214,\
+header:208,bg+:240 --reverse \
+--bind=ctrl-t:top --border --multi"
