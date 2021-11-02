@@ -7,6 +7,8 @@ fi
 
 
 zmodload zsh/complist
+# Lazy load my functions in ~/.zsh/autoloaded.
+autoload -Uz $HOME/.zsh/autoloaded/*(.:t)
 
 function zvm_config() {
     ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
@@ -17,7 +19,6 @@ function zvm_config() {
 source $HOME/.zsh/plugins/powerlevel10k/powerlevel9k.zsh-theme
 source $HOME/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 source $HOME/.zsh/aliases.zsh
-source $HOME/.zsh/functions.zsh
 
 # Bindings related to vim mode
 zvm_bindkey vicmd ' ' zvm_append_eol
