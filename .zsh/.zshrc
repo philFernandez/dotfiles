@@ -10,6 +10,22 @@ zmodload zsh/complist
 # Lazy load my functions in ~/.zsh/autoloaded.
 autoload -Uz $fpath[1]/*(.:t)
 
+# Shell Options {{{1
+setopt \
+  HIST_IGNORE_ALL_DUPS \
+  INC_APPEND_HISTORY \
+  HIST_SAVE_NO_DUPS \
+  HIST_IGNORE_SPACE \
+  APPEND_HISTORY \
+  SHARE_HISTORY \
+  NO_CLOBBER \
+  AUTO_CD \
+  AUTO_PUSHD \
+  PUSHD_IGNORE_DUPS \
+  PUSHD_MINUS \
+  INTERACTIVE_COMMENTS \
+  COMPLETE_ALIASES
+
 function zvm_config() {
     ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
     ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
@@ -31,7 +47,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 
 
 # The following lines were added by compinstall
-
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _ignored _match _correct _approximate _prefix
 zstyle ':completion:*' completions 1
