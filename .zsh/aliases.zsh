@@ -37,5 +37,8 @@ alias -g SOU="~/Source_Code"
 alias -g DOC="~/Documents"
 alias -g DOW="~/Downloads"
 alias -g BIN="~/.bin"
+# File Manipulation {{{2
+alias -g CP="|tr -d '\n'|pbcopy"
+alias -g CPL="|pbcopy"
 # Modeline {{{1
 # vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
