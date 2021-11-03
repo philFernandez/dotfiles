@@ -7,6 +7,7 @@ syntax enable
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'lifepillar/vim-mucomplete'
 call plug#end()
 " UI Settings {{{1
 set termguicolors
@@ -72,6 +73,11 @@ set foldmethod=indent
 set foldlevel=99
 " uncomment to disable fold on file open
 set nofoldenable
+" Completion Settings {{{1
+set completeopt+=menuone
+set completeopt+=noselect
+set shortmess+=c   " Shut off completion messages
+let g:mucomplete#enable_auto_at_startup = 1
 
 " Keymaps {{{1
 "
