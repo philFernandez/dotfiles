@@ -40,5 +40,11 @@ alias -g BIN="~/.bin"
 # File Manipulation {{{2
 alias -g CP="|tr -d '\n'|pbcopy"
 alias -g CPL="|pbcopy"
+# Misc {{{2
+alias -g C="|awk END'{print NR}'"
+alias -g G='| rg --no-filename --color never'
+alias -g B='|bat'
+alias -g F='|fzf'
+
 # Modeline {{{1
 # vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
