@@ -11,6 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'tpope/vim-surround'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 " UI Settings {{{1
 set termguicolors

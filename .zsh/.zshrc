@@ -30,11 +30,16 @@ function zvm_config() {
     ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
     ZVM_VI_EDITOR=/opt/homebrew/bin/vim
     ZVM_KEYTIMEOUT=0.01
+    ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BLOCK
+    ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM
+    ZVM_VISUAL_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
+    ZVM_VISUAL_LINE_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
 }
+source $HOME/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
+
 source $HOME/.zsh/plugins/powerlevel10k/powerlevel9k.zsh-theme
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/plugins/dircolors
 source $HOME/.zsh/.p10k.zsh
