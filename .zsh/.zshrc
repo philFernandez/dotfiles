@@ -44,7 +44,11 @@ source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/plugins/dircolors
-source $HOME/.zsh/.p10k.zsh
+if [[ $TERM_PROGRAM == 'vscode' ]]; then
+    source $HOME/.zsh/.p10k_vscode.zsh
+else
+    source $HOME/.zsh/.p10k.zsh
+fi
 
 # Bindings related to vim mode
 zvm_bindkey vicmd ' ' zvm_append_eol
