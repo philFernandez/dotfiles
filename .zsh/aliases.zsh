@@ -23,7 +23,7 @@ alias cll='clear;ll'
 alias bk='cd ..'
 alias fl='fd -HI -d1'
 alias ka='k -a'
-alias ldiff="diff -u <(fd G -v '(old$|zwc$)') <(config ls-files G -v .gitignore) DSF"
+alias ldiff="delta =(fd -tf -d1 | sort) =(config ls-files | sort)"
 # Dotfiles Version Control {{{2
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cst='config status'
