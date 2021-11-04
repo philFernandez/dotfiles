@@ -23,6 +23,7 @@ alias cll='clear;ll'
 alias bk='cd ..'
 alias fl='fd -HI -d1'
 alias ka='k -a'
+alias ldiff="diff -u <(fd G -v '(old$|zwc$)') <(config ls-files G -v .gitignore) DSF"
 # Dotfiles Version Control {{{2
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cst='config status'
@@ -84,6 +85,7 @@ alias -g C="|awk END'{print NR}'"
 alias -g G='| rg --no-filename --color never'
 alias -g B='|bat'
 alias -g F='|fzf'
+alias -g DSF='|delta'
 
 # Modeline {{{1
 # vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
