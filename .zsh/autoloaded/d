@@ -1,0 +1,7 @@
+# d
+
+local destination
+destination=$(print -l $dirstack | fzf --height 20%)
+[[ -n "$destination" ]] && cd $destination
+
+# vim: ft=zsh

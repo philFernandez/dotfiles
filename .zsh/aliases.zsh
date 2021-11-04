@@ -4,6 +4,7 @@ alias reload='exec zsh'
 alias q='exit'
 alias ppath='print -l $path'
 alias cpdir="pwd | tr -d '\n' | pbcopy"
+alias ds='du -sh 2> /dev/null'
 # Config File Shortcuts {{{2
 alias ev='vim ~/.vimrc'
 alias ep='vim ~/.zsh/aliases.zsh'
