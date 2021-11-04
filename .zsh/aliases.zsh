@@ -23,7 +23,8 @@ alias cll='clear;ll'
 alias bk='cd ..'
 alias fl='fd -HI -d1'
 alias ka='k -a'
-alias ldiff="delta =(fd -tf -d1 | sort) =(config ls-files | sort)"
+# Use in ~/.bin and ~/.zsh/autoloaded to see which files aren't tracked by git
+alias confdiff="delta =(fd -tf -d1 | sort) =(config ls-files | sort)"
 # Dotfiles Version Control {{{2
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cst='config status'
