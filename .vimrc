@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'lifepillar/vim-mucomplete'
+Plug 'tpope/vim-surround'
 call plug#end()
 " UI Settings {{{1
 set termguicolors
