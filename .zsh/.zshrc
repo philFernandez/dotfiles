@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 zmodload zsh/complist
 # Lazy load my functions in ~/.zsh/autoloaded.
 autoload -Uz $fpath[1]/*(.:t)
@@ -37,6 +36,8 @@ source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 source $HOME/.zsh/aliases.zsh
+source $HOME/.zsh/plugins/dircolors
+source $HOME/.zsh/.p10k.zsh
 
 # Bindings related to vim mode
 zvm_bindkey vicmd ' ' zvm_append_eol
@@ -71,9 +72,6 @@ zstyle :compinstall filename '/Users/philthy/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Exports {{{1
 export EDITOR=/opt/homebrew/bin/vim

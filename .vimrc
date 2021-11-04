@@ -1,5 +1,7 @@
 set nocompatible
 let mapleader = ','
+" This is so that kitty terminal renders vim correctly
+let &t_ut=''
 filetype plugin indent on
 syntax enable
 
