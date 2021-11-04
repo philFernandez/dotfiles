@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+FUNC="$HOME/.zsh/autoloaded/${1}"
+TEMPLATE="# $1
+
+
+# vim: ft=zsh"
+
+# If FUNC doesn't exist then copy TEMPLATE into it and open inside $EDITOR
+if ! [[ -e $FUNC ]]; then
+    echo "$TEMPLATE" >> "$FUNC"
+    $EDITOR $FUNC
+else # If FUNC already exists just open it in $EDITOR
+    $EDITOR $FUNC
+fi
