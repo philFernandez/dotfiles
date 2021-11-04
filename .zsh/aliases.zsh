@@ -34,6 +34,40 @@ alias clo='config log --oneline --all --decorate --graph'
 alias clean='brew cleanup --prune=all -s'
 alias update='brew -v update'
 alias upgrade='brew upgrade'
+# Git {{{2
+alias gls="git ls-files"
+alias gce="git commit -a --allow-empty-message -m ''"
+alias gzap='git checkout .'
+alias glor='LESS+=-N git log --oneline --decorate --reverse'
+alias gst='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbd='git branch -d'
+alias gcam='git commit -a -m'
+alias glgp='git log --stat -p'
+alias glg='git log --stat'
+alias glgg='git log --graph'
+alias glgga='git log --graph --decorate --all'
+alias glgm='git log --graph --max-count=10'
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias glols="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --stat"
+alias glod="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+alias glods="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short"
+alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
+alias glog='git log --decorate --graph'
+alias gloa='git log --oneline --decorate --graph --all'
+alias glo='git log --oneline --decorate --graph'
+alias gm='git merge'
+alias gp='git push'
+alias gpl='git pull'
+alias gsps='git show --pretty=short --show-signature'
+alias gss='git status -s'
+alias gst='git status'
+alias gcl='git clone'
+alias gsl='git shortlog'
+alias gco='git checkout'
 # Global Aliases {{{1
 # Goto Shortcuts {{{2
 alias -g SOU="~/Source_Code"

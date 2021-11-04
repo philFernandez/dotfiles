@@ -6,8 +6,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 zmodload zsh/complist
-# Lazy load my functions in ~/.zsh/autoloaded.
-autoload -Uz $fpath[1]/*(.:t)
+# Lazy load my functions in ~/.zsh/autoloaded. Loads normal files and symlinks. 
+# (^/:t) is a glob modifier that '^/' says give files and symlinks, ':t' says strip off
+# the path and only give the file name.
+autoload -Uz $fpath[1]/*(^/:t)
 
 # Shell Options {{{1
 setopt \
