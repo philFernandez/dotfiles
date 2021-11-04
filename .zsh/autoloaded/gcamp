@@ -1,0 +1,6 @@
+# gcamp
+
+local commitMessage=$1
+git commit -a -m $commitMessage && git push origin $VCS_STATUS_LOCAL_BRANCH
+
+# vim: ft=zsh

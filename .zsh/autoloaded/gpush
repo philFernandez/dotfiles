@@ -1,0 +1,9 @@
+# gpush
+
+# Depends on https://reposhub.com/linux/system-utilities/romkatv-gitstatus.html
+# which is bundled with p10k prompt, or can be installed standalone.
+
+git push -u $VCS_STATUS_REMOTE_NAME $VCS_STATUS_REMOTE_BRANCH
+
+
+# vim: ft=zsh
