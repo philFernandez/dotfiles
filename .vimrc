@@ -12,6 +12,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
+Plug 'fladson/vim-kitty'
 call plug#end()
 " UI Settings {{{1
 set termguicolors
