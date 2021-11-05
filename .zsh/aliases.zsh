@@ -11,6 +11,7 @@ alias ev='vim ~/.vimrc'
 alias ep='vim ~/.zsh/aliases.zsh'
 alias el='vim ~/.zsh/.zlogin'
 alias rc='vim ~/.zsh/.zshrc'
+alias ek='vim ~/.config/kitty/kitty.conf'
 # Navigating and Displaying {{{2
 alias cls=clear
 alias ls='lsd --group-dirs first'
