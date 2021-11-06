@@ -15,8 +15,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'fladson/vim-kitty'
 call plug#end()
 " UI Settings {{{1
-set termguicolors
 color OceanicNext
+set termguicolors
+set title
 set number
 set ruler
 set ttimeoutlen=0
