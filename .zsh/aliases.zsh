@@ -14,6 +14,7 @@ alias rc='vim ~/.zsh/.zshrc'
 alias ek='vim ~/.config/kitty/kitty.conf'
 # Navigating and Displaying {{{2
 alias cls=clear
+alias icat="kitty +kitten icat"
 alias ls='lsd --group-dirs first'
 alias la='ls -A'
 alias ll='ls -Al'
@@ -85,6 +86,7 @@ alias gco='git checkout'
 # Goto Shortcuts {{{2
 alias -g SOU="~/Source_Code"
 alias -g DOC="~/Documents"
+alias -g DES="~/Desktop"
 alias -g DOW="~/Downloads"
 alias -g BIN="~/.bin"
 alias -g NOT="~/Documents/Notes"
