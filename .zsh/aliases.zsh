@@ -43,7 +43,7 @@ alias cpush='config push -u origin main'
 alias cdl='config diff'
 alias clcp='config log -p'
 alias ccam='config commit -a -m'
-alias clo='config log --oneline --all --decorate --graph'
+alias clo="config log --all --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 # Homebrew {{{2
 alias clean='brew cleanup --prune=all -s'
 alias update='brew -v update'
