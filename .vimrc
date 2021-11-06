@@ -24,6 +24,7 @@ set splitright
 set splitbelow
 set timeoutlen=1000
 set cursorline
+set shortmess-=S " Show number of matches when searching with '/' or '?'
 
 " Vim Settings {{{1
 set mouse=a
