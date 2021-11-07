@@ -6,6 +6,8 @@ alias ppath='print -l $path'
 alias cpdir="pwd | tr -d '\n' | pbcopy"
 alias ds='du -sh 2> /dev/null'
 alias ip="ifconfig | rg '\d{3}\.\d{3}\.\d\.\d{2}\b' -o --color=never"
+alias md='mkdir -p'
+alias rd='rm -fr'
 # Config File Shortcuts {{{2
 alias ev='vim ~/.vimrc'
 alias ep='vim ~/.zsh/aliases.zsh'
