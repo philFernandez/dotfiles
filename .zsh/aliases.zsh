@@ -56,7 +56,7 @@ alias gce="git commit -a --allow-empty-message -m ''"
 alias gzap='git checkout .'
 alias glor='LESS+=-N git log --oneline --decorate --reverse'
 alias gst='git status'
-alias gd='git diff'
+alias gdl='git diff'
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
