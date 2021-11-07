@@ -29,6 +29,7 @@ alias fl='fd -HI -d1'
 alias ka='k -a'
 # Use in ~/.bin and ~/.zsh/autoloaded to see which files aren't tracked by git
 alias confdiff="delta =(fd -tf -d1 | sort) =(config ls-files | sort)"
+alias kdiff='kitty +kitten diff'
 alias 1='cd -'
 alias 2='cd -2'
 alias 3='cd -3'
