@@ -1,0 +1,5 @@
+# watch
+
+/opt/homebrew/bin/watch -n 0.1 --exec zsh -c "$*"
+
+# vim: ft=zsh

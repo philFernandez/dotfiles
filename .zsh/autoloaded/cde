@@ -1,0 +1,18 @@
+# cde
+
+
+local the_prog
+local the_dir
+
+the_prog=$1
+the_dir=${$(which $the_prog):h}
+
+if [[ $the_dir[1] == '/' ]]; then
+  cd ${=the_dir}
+else
+  which $the_prog
+fi
+
+
+
+# vim: ft=zsh
