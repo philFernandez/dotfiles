@@ -2,7 +2,6 @@
 # Misc {{{2
 alias reload='exec zsh'
 alias q='exit'
-alias ppath='print -l $path'
 alias cpdir="pwd | tr -d '\n' | pbcopy"
 alias ds='du -sh 2> /dev/null'
 alias ip="ifconfig | rg '\d{3}\.\d{3}\.\d\.\d{2}\b' -o --color=never"
@@ -24,7 +23,7 @@ alias l='lsd --blocks date,name,size --date relative -tA'
 alias cl='clear;la'
 alias c='clear;ls -1'
 alias cll='clear;ll'
-alias bk='cd ..'
+alias bk='cd ..;cl'
 alias fl='fd -HI -d1'
 alias ka='k -a'
 # Use in ~/.bin and ~/.zsh/autoloaded to see which files aren't tracked by git

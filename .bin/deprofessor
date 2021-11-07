@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+autoload zmv
+
+# replaces whitespace in files names with '_' in pwd.
+# It is called deprofessor because the only files that
+# i ever deal with that have spaces in their names, are
+# those that I download from professors.
+#find $PWD -d 1 -name "* *" -exec bash -c 'mv "$0" "${0// /_}"' {} \; 2> /dev/null
+
+#for f (*) if [[ $f =~ " " ]]; then /bin/mv -f $f ${f:gs/\ /_/}; fi
+
+zmv -v '(* *)' '${1// /_}' 2> /dev/null
