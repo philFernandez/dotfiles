@@ -1,7 +1,7 @@
+" Things that go first ! {{{1
 set nocompatible
 let mapleader = ','
-" This is so that kitty terminal renders vim correctly
-let &t_ut=''
+let &t_ut='' " This is so vim doesn't look stupid in kitty.
 filetype plugin indent on
 syntax enable
 
