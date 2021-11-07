@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+# Kills running process that steam initiates
+
+launchctl remove com.valvesoftware.steam.ipctool
