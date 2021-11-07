@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+import argparse
+import subprocess
+from os import path
+from os import environ
+from shutil import which
+
+def usage(file_name, exists):
+    if not exists:
+        print(file_name, "doesn't exist.")
+        print("Pass in interpreter to create new script.")
+    else:
+        print(file_name, "already exists.")
+        print("Pass in script_name without interpreter to edit existing file.")
+    print("usage: mks [-h] [interpreter] script_name")
+
+# Makes sure that passed in interpreter actually exists on system
+def interpreter_exists(name):
+    return which(name) is not None
+
+# parse arguments
+parser = argparse.ArgumentParser()
+# interpreter is optional
+parser.add_argument("interpreter", nargs='?', help="the targed scripting language")
+parser.add_argument("script_name", help="the name of your script/command")
+args = parser.parse_args()
+interpreter = args.interpreter
+script_name = args.script_name
+
+# Absolute path to user bin dir
+BIN_PATH = "/Users/philthy/.bin"
+# Get EDITOR environment variable
+EDITOR = environ.get("EDITOR")
+if EDITOR is None:
+    EDITOR = "vim"
+# Put script with bin path
+script_full_path = BIN_PATH + "/" + script_name
+# Check if script already exists
+path_exists = path.exists(script_full_path)
+
+# If interpreter was not passed in, then just check for existence of
+# script, and if it exists open it with EDITOR
+if interpreter is None:
+    if path_exists:
+        subprocess.run([EDITOR, script_full_path])
+    else:
+        usage(script_full_path, False)
+elif interpreter_exists(interpreter):
+    # If interpreter was passed in, then make sure file doesn't already
+    # exist. If it doesn't then create it, and put #!/usr/bin/env `interpreter`
+    # on the top line of the new script file. Then make the file executable,
+    # and open it with EDITOR.
+    if not path_exists:
+        with open(script_full_path, "w") as script:
+            script.write("#!/usr/bin/env " + interpreter)
+        subprocess.run(["chmod", "+x", script_full_path])
+        subprocess.run([EDITOR, script_full_path])
+    else:
+        usage(script_full_path, True)
+else:
+    print(interpreter, 'is an invalid interpreter.')
+    print("usage: mks [-h] [interpreter] script_name")
+

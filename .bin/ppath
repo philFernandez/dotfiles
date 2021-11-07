@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+printf -- '\033[1m\033[38;5;038m%s\033[0m' 'exported PATH variable:'
+print '\033[38;5;038m'
+print -l ${(s|:|)PATH}
