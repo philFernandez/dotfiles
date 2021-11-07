@@ -1,0 +1,43 @@
+{
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.home": "/Users/philthy/SoftwarePackages/jdk-17.0.1.jdk/Contents/Home",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    // Editor Settings
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.suggestSelection": "first",
+    "editor.fontSize": 15.7,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": true,
+    // Filetype Specific Settings
+    "[java]": {
+        "editor.formatOnSave": true,
+    },
+    // Vim Settings
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/Users/philthy/.config/vscode_vim/vimrc",
+    // Terminal Settings
+    "terminal.integrated.fontSize": 15.4,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.inheritEnv": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 400,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "java": false
+    },
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false
+}
