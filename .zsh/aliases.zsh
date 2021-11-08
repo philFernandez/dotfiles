@@ -5,15 +5,16 @@ alias q='exit'
 alias cpdir="pwd | tr -d '\n' | pbcopy"
 alias ds='du -sh 2> /dev/null'
 alias ip="ifconfig | rg '\d{3}\.\d{3}\.\d\.\d{2}\b' -o --color=never"
-alias md='mkdir -p'
-alias rd='rm -fr'
+alias timestamp="date +'%A %B %e %G %r'"
 # Config File Shortcuts {{{2
 alias ev='vim ~/.vimrc'
 alias ep='vim ~/.zsh/aliases.zsh'
 alias el='vim ~/.zsh/.zlogin'
 alias rc='vim ~/.zsh/.zshrc'
 alias ek='vim ~/.config/kitty/kitty.conf'
-# Navigating and Displaying {{{2
+# Navigating and Displaying and File Things {{{2
+alias md='mkdir -p'
+alias rd='rm -fr'
 alias cls=clear
 alias icat="kitty +kitten icat"
 alias ls='lsd --group-dirs first'
