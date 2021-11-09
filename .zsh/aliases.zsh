@@ -7,11 +7,11 @@ alias ds='du -sh 2> /dev/null'
 alias ip="ifconfig | rg '\d{3}\.\d{3}\.\d\.\d{2}\b' -o --color=never"
 alias timestamp="date +'%A %B %e %G %r'"
 # Config File Shortcuts {{{2
-alias ev='vim ~/.vimrc'
-alias ep='vim ~/.zsh/aliases.zsh'
-alias el='vim ~/.zsh/.zlogin'
-alias rc='vim ~/.zsh/.zshrc'
-alias ek='vim ~/.config/kitty/kitty.conf'
+alias ev="$EDITOR ~/.vimrc"
+alias ep="$EDITOR ~/.zsh/aliases.zsh"
+alias el="$EDITOR ~/.zsh/.zlogin"
+alias rc="$EDITOR ~/.zsh/.zshrc"
+alias ek="$EDITOR ~/.config/kitty/kitty.conf"
 # Navigating and Displaying and File Things {{{2
 alias md='mkdir -p'
 alias rd='rm -fr'
@@ -106,5 +106,7 @@ alias -g F='|fzf'
 alias -g DSF='|delta'
 # This is like the fbat alias above, except this can be preceded by and find/fd command. ex: fd -e py FB
 alias -g FB='|fzf --bind "enter:execute(clear;bat --paging=always {})"'
+
 # Modeline {{{1
+
 # vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0

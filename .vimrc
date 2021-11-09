@@ -13,6 +13,7 @@ Plug 'lifepillar/vim-mucomplete'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
 Plug 'fladson/vim-kitty'
+Plug 'tpope/vim-repeat'
 call plug#end()
 " UI Settings {{{1
 color OceanicNext
