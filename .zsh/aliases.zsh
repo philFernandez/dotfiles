@@ -12,6 +12,7 @@ alias ep="$EDITOR ~/.zsh/aliases.zsh"
 alias el="$EDITOR ~/.zsh/.zlogin"
 alias rc="$EDITOR ~/.zsh/.zshrc"
 alias ek="$EDITOR ~/.config/kitty/kitty.conf"
+alias ez="$EDITOR ~/.zshenv"
 # Navigating and Displaying and File Things {{{2
 alias md='mkdir -p'
 alias rd='rm -fr'
@@ -103,6 +104,7 @@ alias -g C="|awk END'{print NR}'"
 alias -g G='| rg --no-filename --color never'
 alias -g B='|bat'
 alias -g F='|fzf'
+alias -g L='|less'
 alias -g DSF='|delta'
 # This is like the fbat alias above, except this can be preceded by and find/fd command. ex: fd -e py FB
 alias -g FB='|fzf --bind "enter:execute(clear;bat --paging=always {})"'
