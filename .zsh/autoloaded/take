@@ -1,2 +1,2 @@
 
-mkdir $@ && cd $@
+mkdir -p $@ && cd $@
