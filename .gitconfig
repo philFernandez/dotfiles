@@ -1,0 +1,16 @@
+[init]
+	defaultBranch = main
+[user]
+	name = philFernandez
+	email = norcal618@gmail.com
+[pager]
+    diff = true
+    branch = false
+[core]
+    pager = delta
+[color]
+    ui = true
+[delta]
+    line-numbers = false
+[pull]
+	rebase = false
