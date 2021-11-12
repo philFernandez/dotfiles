@@ -6,6 +6,15 @@ alias cpdir="pwd | tr -d '\n' | pbcopy"
 alias ds='du -sh 2> /dev/null'
 alias ip="ifconfig | rg '\d{3}\.\d{3}\.\d\.\d{2}\b' -o --color=never"
 alias timestamp="date +'%A %B %e %G %r'"
+# Dotfiles Version Control {{{2
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cst='config status'
+alias cpush='config push -u origin main'
+alias cdl='config diff'
+alias clcp='config log -p'
+alias ccam='config commit -a -m'
+alias czap='(cd && config checkout .)'
+alias clo="config log --all --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)'"
 # Config File Shortcuts {{{2
 alias ev="$EDITOR ~/.vimrc"
 alias ep="$EDITOR ~/.zsh/aliases.zsh"
@@ -41,14 +50,6 @@ alias 6='cd -6'
 alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
-# Dotfiles Version Control {{{2
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias cst='config status'
-alias cpush='config push -u origin main'
-alias cdl='config diff'
-alias clcp='config log -p'
-alias ccam='config commit -a -m'
-alias clo="config log --all --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)'"
 # Homebrew {{{2
 alias clean='brew cleanup --prune=all -s'
 alias update='brew -v update'
