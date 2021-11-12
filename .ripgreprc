@@ -1,0 +1,42 @@
+# ripgrep CONFIG FILE
+
+## COLOR THEME ########
+# Match foreground
+--colors
+match:fg:33,33,33
+# Match background
+--colors
+match:bg:255,147,0
+# Match style
+--colors
+match:style:nobold
+# Line number foreground
+--colors
+line:fg:0,249,0
+# Line number style
+--colors
+line:style:bold
+# File/Path foreground
+--colors
+path:fg:255,147,0
+# File/Path style
+--colors
+path:style:bold
+#######################
+
+## Options ############
+#--with-filename
+-S
+--glob
+!.git/*
+--ignore-file
+/Users/philthy/.rgignore
+#######################
+
+## Types ##############
+# add types, like below
+# then rg -t web <pattern>
+# rg --type-list to show all
+--type-add
+web:*.{html,css,js}*
+#######################
