@@ -51,6 +51,7 @@ compinit
 # End of lines added by compinstall
 
 # Exports {{{1
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export EDITOR=/opt/homebrew/bin/vim
 export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD 2> /dev/null || fd . -HI)'
 export FZF_DEFAULT_OPTS="--color=hl:120,gutter:35,\
