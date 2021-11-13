@@ -83,5 +83,6 @@
             "name": "Philthy Dark",
             "value": "#363636"
         }
-    ]
+    ],
+    "errorLens.enabled": false
 }
