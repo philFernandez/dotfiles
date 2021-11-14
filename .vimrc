@@ -41,6 +41,7 @@ set updatetime=100
 set wildmenu
 set linebreak " Don't wrap in middle of word
 set encoding=utf-8
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
 " Indent Settings {{{1
 set autoindent
