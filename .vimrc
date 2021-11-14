@@ -15,6 +15,7 @@ Plug 'fladson/vim-kitty'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-vinegar'
+Plug 'junegunn/fzf.vim'
 Plug '/opt/homebrew/opt/fzf'
 call plug#end()
 " UI Settings {{{1
@@ -123,7 +124,7 @@ nnoremap <silent> <F5> :resize +2<cr>
 nnoremap <silent> <F6> :resize -2<cr>
 nnoremap <silent> <F7> :vertical resize +2<cr>
 nnoremap <silent> <F8> :vertical resize -2<cr>
-nnoremap <leader>f :FZF<cr>
+nnoremap <leader>f :Files<cr>
 
 
 
