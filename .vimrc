@@ -10,10 +10,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'lifepillar/vim-mucomplete'
-Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
 Plug 'fladson/vim-kitty'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-vinegar'
 call plug#end()
 " UI Settings {{{1
 color OceanicNext
