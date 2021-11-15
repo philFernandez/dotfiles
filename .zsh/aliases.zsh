@@ -8,6 +8,7 @@ alias ip="ifconfig | rg '\d{3}\.\d{3}\.\d\.\d{2}\b' -o --color=never"
 alias timestamp="date +'%A %B %e %G %r'"
 # Dotfiles Version Control {{{2
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias confls='config ls-files'
 alias cst='config status'
 alias cpush='config push -u origin main'
 alias cdl='config diff'
