@@ -26,7 +26,7 @@ setopt \
   INTERACTIVE_COMMENTS \
   COMPLETE_ALIASES
 
-# Tab Completion Things {{{1
+# Tab Completion Things (zstyle) {{{1
 # The following lines were added by compinstall
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _ignored _match _correct _approximate _prefix
