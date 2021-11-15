@@ -3,6 +3,8 @@
 [user]
 	name = philFernandez
 	email = norcal618@gmail.com
+
+# Delta diff -----
 [pager]
     diff = true
     branch = false
@@ -12,5 +14,20 @@
     ui = true
 [delta]
     line-numbers = false
+# ----------------
+
+# Kitty difftool ----
+[diff]
+    tool = kitty
+    guitool = kitty.gui
+[difftool]
+    prompt = false
+    trustExitCode = true
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+# -------------------
+
 [pull]
 	rebase = false
