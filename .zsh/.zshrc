@@ -96,6 +96,26 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
+# Set Kitty Window Title {{{1
+
+# Executed right before each prompt is drawn
+# It displays the PWD
+function set-title-precmd() {
+  printf "\e]2;%s\a" "${PWD/#$HOME/~}"
+}
+
+# Executed after pressing enter, before command line runs.
+# It displays the name of the running command.
+function set-title-preexec() {
+  printf "\e]2;%s\a" "$1"
+}
+
+# See here for info on zsh-hooks
+# https://github.com/rothgar/mastering-zsh/blob/master/docs/config/hooks.md
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd set-title-precmd
+add-zsh-hook preexec set-title-preexec
 # Modeline {{{1
 
 # vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
