@@ -51,6 +51,8 @@ compinit
 # End of lines added by compinstall
 
 # Exports {{{1
+export SAVEHIST=500000
+export HISTSIZE=500000
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export EDITOR=/opt/homebrew/bin/vim
 export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD 2> /dev/null || fd . -HI)'
@@ -59,7 +61,6 @@ pointer:220,hl+:118,fg:251,fg+:bright-blue,\
 marker:196,border:214,prompt:214,\
 header:208,bg+:240 --reverse \
 --bind=ctrl-t:top --border --multi"
-
 # zvm setup {{{1
 function zvm_config() {
     ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
