@@ -45,7 +45,7 @@ zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 zstyle ':completion:*' substitute 1
 zstyle ':completion:*' menu select=1
-zstyle :compinstall filename '/Users/philthy/.zshrc'
+zstyle :compinstall filename '/Users/philthy/.zsh/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
