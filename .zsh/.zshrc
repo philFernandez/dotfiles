@@ -39,6 +39,12 @@ zstyle ':completion:*' glob 1
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-dirs-first 1
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:commands'  list-colors '=*=1;38;5;220'
+zstyle ':completion:*:builtins'  list-colors '=*=1;38;5;170'
+zstyle ':completion:*:aliases'  list-colors '=*=1;38;5;68'
+zstyle ':completion:*:parameters'  list-colors '=*=1;38;5;166'
+zstyle ':completion:*:options' list-colors '=^(-- *)=1;38;5;227'
+zstyle ':completion:*:*:kill:*' list-colors '=(#b) #([0-9]#)*( *[a-z])*=34=31=33'
 zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
 zstyle ':completion:*' match-original both
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]} m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
