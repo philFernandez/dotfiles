@@ -21,6 +21,13 @@
     // Vim Settings
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "/Users/philthy/.config/vscode_vim/vimrc",
+    "vim.searchHighlightColor": "yellow",
+    "vim.searchHighlightTextColor": "black",
+    "vim.hlsearch": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 400,
+    "vim.leader": ",",
+    "vim.showMarksInGutter": true, // :delmarks! to delete all marks
     // Terminal Settings
     "terminal.integrated.fontSize": 15.4,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -28,8 +35,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.productIconTheme": "fluent-icons",
     "workbench.colorTheme": "GitHub Dark",
-    "vim.highlightedyank.enable": true,
-    "vim.highlightedyank.duration": 400,
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true,
