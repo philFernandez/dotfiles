@@ -1,0 +1,7 @@
+nmap <Space> A
+nmap sa ggVG
+nmap J }
+nmap K {
+nmap Q :q!<cr>
+
+nnoremap <leader><Space> :nohl<cr>
