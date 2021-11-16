@@ -33,6 +33,8 @@ zstyle ':completion:*' completer _expand _complete _ignored _match _correct _app
 zstyle ':completion:*' completions 1
 zstyle ':completion:*:*:*:*:descriptions' format '%F{green}%B<- %d ->%b%f'
 zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
 zstyle ':completion:*' glob 1
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-dirs-first 1
