@@ -31,7 +31,7 @@ setopt \
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _ignored _match _correct _approximate _prefix
 zstyle ':completion:*' completions 1
-zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' format '%F{green}-- %d --%f'
 zstyle ':completion:*' glob 1
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-dirs-first 1
