@@ -62,11 +62,13 @@ printf -- '<-::Exported $PATH::->'
 cc
 ansiFG
 pathBGColor
-printf -- '\Ue0b4'
+echo '\Ue0b4'
 ansiFG
 pathFGColor
 print -l ${(s|:|)PATH}
 cc
+
+echo
 
 ansiFG
 fpathBGColor
@@ -82,7 +84,7 @@ printf -- '<-::Exported $FPATH::->'
 cc
 ansiFG
 fpathBGColor
-printf -- '\Ue0b4'
+echo '\Ue0b4'
 ansiFG
 fpathFGColor
 print -l ${(s|:|)FPATH}
