@@ -94,6 +94,10 @@ alias gst='git status'
 alias gcl='git clone'
 alias gsl='git shortlog'
 alias gco='git checkout'
+# Color Escape Sequences {{{2
+alias green="printf -- '\033[1;38;2;159;252;166m'"
+alias blue="printf -- '\033[1;38;2;159;166;252m'"
+alias red="printf -- '\033[1;38;2;252;166;159m'"
 # Global Aliases {{{1
 # Goto Shortcuts {{{2
 alias -g SOU="~/Source_Code"
