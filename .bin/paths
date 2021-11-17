@@ -33,7 +33,7 @@ pathULColor() {
 }
 
 fpathFGColor() {
-    printf -- '5;16m'
+    printf -- '5;1m'
 }
 
 fpathBGColor() {
@@ -80,7 +80,11 @@ ansiUL
 fpathULColor
 printf -- '<-::Exported $FPATH::->'
 cc
-printf '\033[1;38;5;82m\Ue0b4'
-print '\033[1;38;5;1m'
+ansiFG
+fpathBGColor
+printf -- '\Ue0b4'
+ansiFG
+fpathFGColor
 print -l ${(s|:|)FPATH}
+cc
 
