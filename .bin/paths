@@ -51,7 +51,8 @@ cc
 ansiFG
 pathBGColor
 printf -- '\Ue0b4'
-print '\033[1;38;5;82m'
+ansiFG
+pathFGColor
 print -l ${(s|:|)PATH}
 cc
 printf '\033[1;38;5;82m\Ue0b6'
