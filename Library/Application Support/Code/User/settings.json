@@ -37,7 +37,7 @@
     "workbench.colorTheme": "GitHub Dark",
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "yaml": false,
         "plaintext": false,
         "markdown": false,
