@@ -48,7 +48,9 @@ ansiUL
 pathULColor
 printf -- '<-::Exported $PATH::->'
 cc
-printf '\033[1;38;2;0;0;0m\Ue0b4'
+ansiFG
+pathBGColor
+printf -- '\Ue0b4'
 print '\033[1;38;5;82m'
 print -l ${(s|:|)PATH}
 cc
