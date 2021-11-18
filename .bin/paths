@@ -20,6 +20,11 @@ ansiUL() {
 
 pathBGColor='2;0;0;0'
 pathFGColor='5;82'
+pathULColor='5;196'
+
+fpathBGColor='5;1'
+fpathFGColor='5;82'
+fpathULColor='5;21'
 
 # These are the actual ansi colors.
 pathBG() {
@@ -31,19 +36,19 @@ pathFG() {
 }
 
 pathUL() {
-    printf -- '58;5;196m'
+    printf -- "58;${pathULColor}m"
 }
 
 fpathFG() {
-    printf -- '5;1m'
+    printf -- "${fpathFGColor}m"
 }
 
 fpathBG() {
-    printf -- '5;82m'
+    printf -- "${fpathBGColor}m"
 }
 
 fpathUL() {
-    printf -- '58;5;21m'
+    printf -- "58;${fpathULColor}m"
 }
 
 # Must have an ansi## followed by a (f)path##Color
