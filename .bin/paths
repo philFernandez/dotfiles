@@ -73,6 +73,34 @@ pathList() {
     print -l ${(s|:|)PATH}
     cc
 }
+fpathBannerLeft() {
+    ansiFG
+    fpathBGColor
+    printf -- '\Ue0b6'
+    cc
+}
+fpathBannerBody() {
+    ansiBG
+    fpathBGColor
+    ansiFG
+    fpathFGColor
+    ansiUL
+    fpathULColor
+    printf -- '<-::Exported $FPATH::->'
+    cc
+}
+fpathBannerRight() {
+    ansiFG
+    fpathBGColor
+    echo '\Ue0b4'
+    cc
+}
+fpathList() {
+    ansiFG
+    fpathFGColor
+    print -l ${(s|:|)FPATH}
+    cc
+}
 
 
 pathBannerLeft
@@ -80,26 +108,11 @@ pathBannerBody
 pathBannerRight
 pathList
 
-
 echo
 
-ansiFG
-fpathBGColor
-printf -- '\Ue0b6'
-cc
-ansiBG
-fpathBGColor
-ansiFG
-fpathFGColor
-ansiUL
-fpathULColor
-printf -- '<-::Exported $FPATH::->'
-cc
-ansiFG
-fpathBGColor
-echo '\Ue0b4'
-ansiFG
-fpathFGColor
-print -l ${(s|:|)FPATH}
-cc
+fpathBannerLeft
+fpathBannerBody
+fpathBannerRight
+fpathList
+
 
