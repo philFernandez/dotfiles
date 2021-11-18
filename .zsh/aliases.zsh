@@ -98,6 +98,7 @@ alias gco='git checkout'
 alias green="printf -- '\033[1;38;2;159;252;166m'"
 alias blue="printf -- '\033[1;38;2;159;166;252m'"
 alias red="printf -- '\033[1;38;2;252;166;159m'"
+alias yellow="printf -- '\033[1;38;2;246;252;9m'"
 # Global Aliases {{{1
 # Goto Shortcuts {{{2
 alias -g SOU="~/Source_Code"
