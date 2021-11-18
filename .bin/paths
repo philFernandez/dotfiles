@@ -1,5 +1,30 @@
 #!/bin/zsh
 
+
+# #############################################################################################################
+# #############################################################################################################
+# #############################################################################################################
+# This is where the colors and powerline symbols can be adjusted (nothing else needs to be touched)
+# Use
+# 2;r;g;b
+# Or
+# 5;n
+pathBGColor='2;0;0;0'
+pathFGColor='5;82'
+pathULColor='5;196'
+
+fpathBGColor='5;1'
+fpathFGColor='5;82'
+fpathULColor='5;21'
+
+# These are the powerline symbols for the banners
+leftSymbol='\Ue0b6'
+rightSymbol='\Ue0b4'
+# #############################################################################################################
+# #############################################################################################################
+# #############################################################################################################
+
+
 # Clear the current ansi sequence
 cc() {
     printf -- '\033[0m'
@@ -17,14 +42,6 @@ ansiFG() {
 ansiUL() {
     printf -- '\033[4;'
 }
-
-pathBGColor='2;0;0;0'
-pathFGColor='5;82'
-pathULColor='5;196'
-
-fpathBGColor='5;1'
-fpathFGColor='5;82'
-fpathULColor='5;21'
 
 # These are the actual ansi colors.
 pathBG() {
@@ -52,10 +69,11 @@ fpathUL() {
 }
 
 # Must have an ansi## followed by a (f)path##Color
+# Compose above ansi sequence segments into cohesive parts to be displayed.
 pathBannerLeft() {
     ansiFG
     pathBG
-    printf -- '\Ue0b6'
+    printf -- "$leftSymbol"
     cc
 }
 pathBannerBody() {
@@ -71,7 +89,7 @@ pathBannerBody() {
 pathBannerRight() {
     ansiFG
     pathBG
-    echo '\Ue0b4'
+    echo "$rightSymbol"
     cc
 }
 pathList() {
@@ -83,7 +101,7 @@ pathList() {
 fpathBannerLeft() {
     ansiFG
     fpathBG
-    printf -- '\Ue0b6'
+    printf -- "$leftSymbol"
     cc
 }
 fpathBannerBody() {
@@ -99,7 +117,7 @@ fpathBannerBody() {
 fpathBannerRight() {
     ansiFG
     fpathBG
-    echo '\Ue0b4'
+    echo "$rightSymbol"
     cc
 }
 fpathList() {
@@ -110,6 +128,7 @@ fpathList() {
 }
 
 
+# This part calls the composed section functions for displaying
 pathBannerLeft
 pathBannerBody
 pathBannerRight
