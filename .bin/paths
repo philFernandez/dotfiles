@@ -45,21 +45,26 @@ fpathULColor() {
 }
 
 # Must have an ansi## followed by a (f)path##Color
+pathBannerLeft() {
+    ansiFG
+    pathBGColor
+    printf -- '\Ue0b6'
+    cc
+}
+pathBannerBody() {
+    ansiBG
+    pathBGColor
+    ansiFG
+    pathFGColor
+    ansiUL
+    pathULColor
+    printf -- '<-::Exported $PATH::->'
+    cc
+}
 
 
-
-ansiFG
-pathBGColor
-printf -- '\Ue0b6'
-cc
-ansiBG
-pathBGColor
-ansiFG
-pathFGColor
-ansiUL
-pathULColor
-printf -- '<-::Exported $PATH::->'
-cc
+pathBannerLeft
+pathBannerBody
 ansiFG
 pathBGColor
 echo '\Ue0b4'
