@@ -67,15 +67,19 @@ pathBannerRight() {
     echo '\Ue0b4'
     cc
 }
+pathList() {
+    ansiFG
+    pathFGColor
+    print -l ${(s|:|)PATH}
+    cc
+}
 
 
 pathBannerLeft
 pathBannerBody
 pathBannerRight
-ansiFG
-pathFGColor
-print -l ${(s|:|)PATH}
-cc
+pathList
+
 
 echo
 
