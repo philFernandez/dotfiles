@@ -61,13 +61,17 @@ pathBannerBody() {
     printf -- '<-::Exported $PATH::->'
     cc
 }
+pathBannerRight() {
+    ansiFG
+    pathBGColor
+    echo '\Ue0b4'
+    cc
+}
 
 
 pathBannerLeft
 pathBannerBody
-ansiFG
-pathBGColor
-echo '\Ue0b4'
+pathBannerRight
 ansiFG
 pathFGColor
 print -l ${(s|:|)PATH}
