@@ -9,13 +9,13 @@
 # 2;r;g;b
 # Or
 # 5;n
-pathBGColor='2;0;0;0'
-pathFGColor='5;82'
+pathBGColor='5;16'
+pathFGColor='5;3'
 pathULColor='5;196'
 
-fpathBGColor='5;1'
-fpathFGColor='5;82'
-fpathULColor='5;21'
+fpathBGColor='5;202'
+fpathFGColor='5;50'
+fpathULColor='5;118'
 
 # These are the powerline symbols for the banners
 leftSymbol='\Ue0b6'
