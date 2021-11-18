@@ -18,86 +18,88 @@ ansiUL() {
     printf -- '\033[4;'
 }
 
+pathBGColor='2;0;0;0'
+pathFGColor='5;82'
 
 # These are the actual ansi colors.
-pathBGColor() {
-    printf -- '2;0;0;0m'
+pathBG() {
+    printf -- "${pathBGColor}m"
 }
 
-pathFGColor() {
-    printf -- '5;82m'
+pathFG() {
+    printf -- "${pathFGColor}m"
 }
 
-pathULColor() {
+pathUL() {
     printf -- '58;5;196m'
 }
 
-fpathFGColor() {
+fpathFG() {
     printf -- '5;1m'
 }
 
-fpathBGColor() {
+fpathBG() {
     printf -- '5;82m'
 }
 
-fpathULColor() {
+fpathUL() {
     printf -- '58;5;21m'
 }
 
 # Must have an ansi## followed by a (f)path##Color
 pathBannerLeft() {
     ansiFG
-    pathBGColor
+    pathBG
     printf -- '\Ue0b6'
     cc
 }
 pathBannerBody() {
     ansiBG
-    pathBGColor
+    pathBG
     ansiFG
-    pathFGColor
+    pathFG
     ansiUL
-    pathULColor
+    pathUL
     printf -- '<-::Exported $PATH::->'
     cc
 }
 pathBannerRight() {
     ansiFG
-    pathBGColor
+    pathBG
     echo '\Ue0b4'
     cc
 }
 pathList() {
     ansiFG
-    pathFGColor
+    pathFG
     print -l ${(s|:|)PATH}
     cc
 }
 fpathBannerLeft() {
     ansiFG
-    fpathBGColor
+    fpathBG
     printf -- '\Ue0b6'
     cc
 }
 fpathBannerBody() {
     ansiBG
-    fpathBGColor
+    fpathBG
     ansiFG
-    fpathFGColor
+    fpathFG
     ansiUL
-    fpathULColor
+    fpathUL
     printf -- '<-::Exported $FPATH::->'
     cc
 }
 fpathBannerRight() {
     ansiFG
-    fpathBGColor
+    fpathBG
     echo '\Ue0b4'
     cc
 }
 fpathList() {
     ansiFG
-    fpathFGColor
+    fpathFG
     print -l ${(s|:|)FPATH}
     cc
 }
