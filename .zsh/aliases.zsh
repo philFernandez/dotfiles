@@ -29,6 +29,7 @@ alias ez="$EDITOR ~/.zshenv"
 alias md='mkdir -p'
 alias rd='rm -fr'
 alias cls=clear
+alias csl=clear
 alias icat="kitty +kitten icat"
 alias ls='lsd --group-dirs first'
 alias la='ls -A'
