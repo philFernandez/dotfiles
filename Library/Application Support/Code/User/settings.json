@@ -88,5 +88,9 @@
             "name": "Philthy Dark",
             "value": "#363636"
         }
+    ],
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "info"
     ]
 }
