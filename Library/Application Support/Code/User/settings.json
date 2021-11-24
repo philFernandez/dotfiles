@@ -92,5 +92,6 @@
     "errorLens.enabledDiagnosticLevels": [
         "error",
         "info"
-    ]
+    ],
+    "explorer.confirmDelete": false
 }

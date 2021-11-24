@@ -9,7 +9,7 @@
     diff = true
     branch = false
 [core]
-    pager = delta
+    pager = delta -s
 [color]
     ui = true
 [delta]
