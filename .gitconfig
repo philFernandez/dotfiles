@@ -9,11 +9,15 @@
     diff = true
     branch = false
 [core]
-    pager = delta -s
+    pager = delta
 [color]
     ui = true
 [delta]
-    line-numbers = false
+    line-numbers = true
+    side-by-side = true
+    syntax-theme = "Sublime Snazzy"
+    file-style = white
+    file-decoration-style = "green ul"
 # ----------------
 
 # Kitty difftool ----
