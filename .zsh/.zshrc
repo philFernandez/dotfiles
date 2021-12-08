@@ -26,40 +26,6 @@ setopt \
   INTERACTIVE_COMMENTS \
   COMPLETE_ALIASES
 
-# Tab Completion Things (zstyle) {{{1
-# The following lines were added by compinstall
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _ignored _match _correct _approximate _prefix
-zstyle ':completion:*' completions 1
-zstyle ':completion:*:*:*:*:descriptions' format '%F{green}%B<- %d ->%b%f'
-zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
-zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
-zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
-zstyle ':completion:*' glob 1
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' list-dirs-first 1
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*:commands'  list-colors '=*=1;38;5;220'
-zstyle ':completion:*:builtins'  list-colors '=*=1;38;5;170'
-zstyle ':completion:*:aliases'  list-colors '=*=1;38;5;68'
-zstyle ':completion:*:parameters'  list-colors '=*=1;38;5;166'
-zstyle ':completion:*:options' list-colors '=^(-- *)=1;38;5;227'
-zstyle ':completion:*:*:kill:*' list-colors '=(#b) #([0-9]#)*( *[a-z])*=34=31=33'
-zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
-zstyle ':completion:*' match-original both
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]} m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' max-errors 3
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' original true
-zstyle ':completion:*' preserve-prefix '//[^/]##/'
-zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
-zstyle ':completion:*' substitute 1
-zstyle ':completion:*' menu select=1
-zstyle :compinstall filename '/Users/philthy/.zsh/.zshrc'
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
 # Exports {{{1
 export SAVEHIST=500000
 export HISTSIZE=500000
@@ -106,6 +72,40 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+
+# Tab Completion Things (zstyle: Needs to come after Source Things) {{{1
+# The following lines were added by compinstall (and by me { Phil })
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _ignored _match _correct _approximate _prefix
+zstyle ':completion:*' completions 1
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}%B<- %d ->%b%f'
+zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*' glob 1
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-dirs-first 1
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:commands'  list-colors '=*=1;38;5;220'
+zstyle ':completion:*:builtins'  list-colors '=*=1;38;5;170'
+zstyle ':completion:*:aliases'  list-colors '=*=1;38;5;68'
+zstyle ':completion:*:parameters'  list-colors '=*=1;38;5;166'
+zstyle ':completion:*:options' list-colors '=^(-- *)=1;38;5;227'
+zstyle ':completion:*:*:kill:*' list-colors '=(#b) #([0-9]#)*( *[a-z])*=34=31=33'
+zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
+zstyle ':completion:*' match-original both
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]} m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' max-errors 3
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' original true
+zstyle ':completion:*' preserve-prefix '//[^/]##/'
+zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+zstyle ':completion:*' substitute 1
+zstyle ':completion:*' menu select=1
+zstyle :compinstall filename '/Users/philthy/.zsh/.zshrc'
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
 # Set Kitty Window Title {{{1
 
