@@ -93,5 +93,6 @@
         "error",
         "info"
     ],
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotShowInfoMsg": true
 }
