@@ -1,0 +1,22 @@
+# bk
+
+# If no args are passed in then just cd back (aka up) 1 directory.
+if [[ $# -eq '0' ]]; then
+    cd ..
+else
+
+    # If arg is given first make sure that the arg is an integer, then cd back (aka up) that many times.
+    [[ $1 =~ "^[0-9]+$" ]] && {
+        local nargs=$1
+        print "\033[1;38;5;33mGoing up \033[0m\033[3;4;38;5;112m$nargs\033[0m \033[1;38;5;33mdirectories"
+        while [ $nargs -ne '0' ]; do
+            cd ..
+            ((nargs--))
+        done
+    } || {
+        # If the argument didn't match the regex then we exit with a message and return 1
+        print "\033[1;38;5;1mError: \033[0m\033[1;38;5;158mArgument must be single integer"
+        return 1
+    }
+fi
+# vim: ft=zsh
