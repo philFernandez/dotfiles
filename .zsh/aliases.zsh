@@ -121,6 +121,9 @@ alias -g DSF='|delta'
 # This is like the fbat alias above, except this can be preceded by and find/fd command. ex: fd -e py FB
 alias -g FB='|fzf --bind "enter:execute(clear;bat --paging=always {})"'
 
+# Suffix Aliases {{{1
+alias -s png="icat"
+
 # Modeline {{{1
 
 # vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
