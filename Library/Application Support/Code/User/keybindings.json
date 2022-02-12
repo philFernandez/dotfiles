@@ -27,19 +27,19 @@
     },
     // Navigate Split Windows
     {
-        "key": "cmd+h",
+        "key": "cmd+shift+h",
         "command": "workbench.action.navigateLeft"
     },
     {
-        "key": "cmd+l",
+        "key": "cmd+shift+l",
         "command": "workbench.action.navigateRight"
     },
     {
-        "key": "cmd+k",
+        "key": "cmd+shift+k",
         "command": "workbench.action.navigateUp"
     },
     {
-        "key": "cmd+j",
+        "key": "cmd+shift+j",
         "command": "workbench.action.navigateDown"
     }
 ]
