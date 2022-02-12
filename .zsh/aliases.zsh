@@ -27,6 +27,7 @@ alias ek="$EDITOR ~/.config/kitty/kitty.conf"
 alias ez="$EDITOR ~/.zshenv"
 # Navigating and Displaying and File Things {{{2
 alias md='mkdir -p'
+alias finder='open .'
 alias rd='rm -fr'
 alias cls=clear
 alias csl=clear

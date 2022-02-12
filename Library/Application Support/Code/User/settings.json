@@ -45,7 +45,6 @@
     },
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
-
     // Peacock Colors
     "peacock.favoriteColors": [
         {
@@ -94,5 +93,8 @@
         "info"
     ],
     "explorer.confirmDelete": false,
-    "liveServer.settings.donotShowInfoMsg": true
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.minimap.enabled": false,
+    "javascript.format.semicolons": "insert",
+    "editor.formatOnSave": true
 }
