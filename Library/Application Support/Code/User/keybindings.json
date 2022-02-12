@@ -24,5 +24,22 @@
         "key": "ctrl+alt+m",
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "terminalFocus"
+    },
+    // Navigate Split Windows
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.navigateDown"
     }
 ]
