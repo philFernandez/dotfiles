@@ -59,6 +59,7 @@ alias 9='cd -9'
 alias clean='brew cleanup --prune=all -s'
 alias update='brew -v update'
 alias upgrade='brew upgrade'
+alias outdated='brew outdated'
 # Git {{{2
 alias gls="git ls-files"
 alias gce="git commit -a --allow-empty-message -m ''"
