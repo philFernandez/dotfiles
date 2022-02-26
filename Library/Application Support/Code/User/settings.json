@@ -96,5 +96,8 @@
     "liveServer.settings.donotShowInfoMsg": true,
     "editor.minimap.enabled": false,
     "javascript.format.semicolons": "insert",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "cSpell.userWords": [
+        "Janky"
+    ]
 }
