@@ -1,0 +1,9 @@
+# rmft
+
+# removes all files with suffix matching "file_suffix"
+
+file_suffix=$1
+
+fd -d1 -e $file_suffix -x rm -v {}
+
+# vim: ft=zsh
