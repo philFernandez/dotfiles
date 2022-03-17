@@ -41,5 +41,35 @@
     {
         "key": "cmd+shift+j",
         "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "selectAllSearchEditorMatches",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-selectAllSearchEditorMatches",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "addCursorsAtSearchResults",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-addCursorsAtSearchResults",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
     }
 ]
