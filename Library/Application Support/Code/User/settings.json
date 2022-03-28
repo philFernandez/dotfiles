@@ -104,5 +104,6 @@
     ],
     "workbench.startupEditor": "none",
     "typescript.suggest.paths": false,
-    "javascript.suggest.paths": false
+    "javascript.suggest.paths": false,
+    "security.workspace.trust.untrustedFiles": "open"
 }
