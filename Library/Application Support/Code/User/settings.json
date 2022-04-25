@@ -97,13 +97,24 @@
     "javascript.format.semicolons": "insert",
     "editor.formatOnSave": true,
     "cSpell.userWords": [
+        "classname",
+        "dlat",
         "esbuild",
+        "Idxs",
         "Janky",
         "pacman",
+        "proto",
+        "protobuf",
+        "protoc",
+        "protoimpl",
         "WASD"
     ],
     "workbench.startupEditor": "none",
     "typescript.suggest.paths": false,
     "javascript.suggest.paths": false,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.tabs.enabled": false,
+    "cSpell.enableFiletypes": [
+        "proto3"
+    ]
 }
