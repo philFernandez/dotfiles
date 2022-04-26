@@ -25,7 +25,31 @@ setopt \
   PUSHD_MINUS \
   INTERACTIVE_COMMENTS \
   COMPLETE_ALIASES \
-  CD_SILENT
+  CD_SILENT \
+  MENU_COMPLETE \
+  GLOB_COMPLETE 
+
+#
+# What the (non obvious) above options do -
+#
+# NO_CLOBBER - Prevents redirection from ovewriting files. Can be sidestepped with >| 
+#              or >!
+# AUTO_CD - Cd's into a directory implicitly without first entering cd
+#
+# PUSHD_MINUS - Exchanges the meanings of + and - when used with a number to specify a 
+#               directory in the stack.
+# INTERACTIVE_COMMENTS - Allows comments in interactive shells
+#
+# COMPLETE_ALIASES - Prevents aliases on the command line from being internally substituted before completion is attempted
+#
+# CD_SILENT - Prevent echoing back of PWD when AUTO_CDing or dirstacking into a directory
+#
+# MENU_COMPLETE - Make it so that pusing tab just starts scrolling through completion list with cursor
+#
+# GLOB_COMPLETE - Prevents glob expansion from filling in all at once and instead opens a completion menu. 
+#                 (i.e. ls *.txt<Tab> will not automatically insert all txt files; it will open the menu.)
+#
+
 
 # Exports {{{1
 export SAVEHIST=500000
