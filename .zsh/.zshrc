@@ -27,7 +27,10 @@ setopt \
   COMPLETE_ALIASES \
   CD_SILENT \
   MENU_COMPLETE \
-  GLOB_COMPLETE 
+  GLOB_COMPLETE \
+  GLOB_DOTS \
+  HIST_NO_STORE \
+  HIST_FCNTL_LOCK
 
 #
 # What the (non obvious) above options do -
@@ -48,6 +51,12 @@ setopt \
 #
 # GLOB_COMPLETE - Prevents glob expansion from filling in all at once and instead opens a completion menu. 
 #                 (i.e. ls *.txt<Tab> will not automatically insert all txt files; it will open the menu.)
+# GLOB_DOTS - Includes filenames that begin with '.' in all glob completions without needing to explicitly type 
+#             '.' as the first character. (e.g. ls<Tab> will list all files, including hidden ones)
+#                         
+# HIST_NO_STORE - prevents the 'history' and 'fc -l' commands from being saved to history
+#
+# HIST_FCNTL_LOCK - may prevent history corruption. (also it may not, and it may make things worse)
 #
 
 
