@@ -3,6 +3,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export BOOK=$HOME/Source_Code/GoLang/PowerfulCmdApps
 # zmodlads and autoloads {{{1
 zmodload zsh/complist
 # Lazy load my functions in ~/.zsh/autoloaded. Loads normal files and symlinks. 

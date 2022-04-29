@@ -100,9 +100,11 @@
         "classname",
         "dlat",
         "esbuild",
+        "gocode",
         "Idxs",
         "Janky",
         "pacman",
+        "phillearnsgo",
         "proto",
         "protobuf",
         "protoc",
@@ -116,5 +118,6 @@
     "terminal.integrated.tabs.enabled": false,
     "cSpell.enableFiletypes": [
         "proto3"
-    ]
+    ],
+    "code-runner.clearPreviousOutput": true
 }
