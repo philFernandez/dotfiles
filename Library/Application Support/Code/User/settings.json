@@ -1,6 +1,6 @@
 {
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "java.home": "/Users/philthy/SoftwarePackages/jdk-17.0.1.jdk/Contents/Home",
+    // "java.home": "/Users/philthy/SoftwarePackages/jdk-17.0.1.jdk/Contents/Home",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -19,15 +19,8 @@
         "editor.formatOnSave": true,
     },
     // Vim Settings
-    "vim.vimrc.enable": true,
-    "vim.vimrc.path": "/Users/philthy/.config/vscode_vim/vimrc",
-    "vim.searchHighlightColor": "yellow",
-    "vim.searchHighlightTextColor": "black",
-    "vim.hlsearch": true,
-    "vim.highlightedyank.enable": true,
-    "vim.highlightedyank.duration": 400,
-    "vim.leader": ",",
-    "vim.showMarksInGutter": true, // :delmarks! to delete all marks
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/philthy/.config/vscode_vim/init.vim",
     // Terminal Settings
     "terminal.integrated.fontSize": 15.4,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
