@@ -7,21 +7,24 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    // Editor Settings
+    // * EDITOR SETTINGS
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.suggestSelection": "first",
     "editor.fontSize": 15.7,
     "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": true,
     "editor.formatOnPaste": true,
-    // Filetype Specific Settings
+    // * FILETYPE SPECIFIC SETTINGS
     "[java]": {
         "editor.formatOnSave": true,
     },
-    // Vim Settings
+    // * VSCODE-NEOVIM SETTINGS
+    // ! Most settings are managed in external init.vim -> ~/.config/vscode_vim/init.vim
+    // ! If opening external init.vim with neovim use command:
+    // ! nvim -u ~/.config/vscode_vim/init.vim ~/.config/vscode_vim/init.vim
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/philthy/.config/vscode_vim/init.vim",
-    // Terminal Settings
+    // * TERMINAL SETTINGS
     "terminal.integrated.fontSize": 15.4,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "terminal.integrated.inheritEnv": false,
@@ -38,7 +41,7 @@
     },
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
-    // Peacock Colors
+    // * PEACOCK COLORS
     "peacock.favoriteColors": [
         {
             "name": "Angular Red",
