@@ -25,9 +25,49 @@
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/philthy/.config/vscode_vim/init.vim",
     // * TERMINAL SETTINGS
+    "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.fontSize": 15.4,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.defaultProfile.osx": "zshnl",
+    // ! This (particularly the zshnl value) prevents zsh from being a login shell. Setting zshnl as the default terminal 
+    // ! (cmd+p -> Terminal: Select Default Profile) prevents $PATH from being loaded twice when opening with the `code .` 
+    // ! terminal command. The drawback is that now $ZDOTDIR/.zlogin is not sourced at all when opening vscode any other 
+    // ! way that using the `code .` command, and hence $PATH isn't fully loaded. So only open vscode with `code .` 
+    // ! (or you can run zsh -l manually from the terminal if opening other than with `code .`).
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
+        },
+        "zshnl": {
+            "path": "/bin/zsh"
+        },
+        "fish": {
+            "path": "fish",
+            "args": [
+                "-l"
+            ]
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    // * WORKBENCH SETTINGS
     "workbench.iconTheme": "material-icon-theme",
     "workbench.productIconTheme": "fluent-icons",
     "workbench.colorTheme": "GitHub Dark",
@@ -111,9 +151,8 @@
     "typescript.suggest.paths": false,
     "javascript.suggest.paths": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.tabs.enabled": false,
     "cSpell.enableFiletypes": [
         "proto3"
     ],
-    "code-runner.clearPreviousOutput": true
+    "code-runner.clearPreviousOutput": true,
 }
