@@ -136,6 +136,7 @@
         "classname",
         "dlat",
         "esbuild",
+        "fname",
         "gocode",
         "Idxs",
         "Janky",
