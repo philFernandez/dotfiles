@@ -13,11 +13,7 @@
     "editor.fontSize": 15.7,
     "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": true,
-    "editor.formatOnPaste": true,
     // * FILETYPE SPECIFIC SETTINGS
-    "[java]": {
-        "editor.formatOnSave": true,
-    },
     // * VSCODE-NEOVIM SETTINGS
     // ! Most settings are managed in external init.vim -> ~/.config/vscode_vim/init.vim
     // ! If opening external init.vim with neovim use command:
