@@ -1,0 +1,20 @@
+# zap
+
+local cmd_line="fd -HId1 -E .DS_Store -E .localized -x rm -frv {}"
+
+if [[ $1 == '-y' ]]
+then
+    eval $cmd_line
+else
+    print -n 'Are you sure you want to zap everything?!?! [yn] '
+    read -q yes_zap
+    echo
+    echo
+    if [[ $yes_zap == 'y' ]]
+    then
+        eval $cmd_line
+    fi
+fi
+
+
+# vim: ft=zsh

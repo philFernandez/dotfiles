@@ -1,0 +1,14 @@
+# pupdate
+# Run updates on all plugins under ~/.zsh/plugins
+
+echo "\033[1m\033[38;5;004mUPDATING PLUGINS IN ~/.zsh/plugins"
+for repo in $(fd .git$ -HIL -td -tl --exclude my_plugins ~/.zsh/plugins); do
+  echo "\033[1m\033[38;5;002mChecking \
+\033[38;5;003m$repo:h:t\033[0m \
+\033[1m\033[38;5;002mfor updates...\033[0m"
+  (cd $repo:h && git pull)
+  echo
+done
+
+
+# vim: ft=zsh
