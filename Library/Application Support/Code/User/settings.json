@@ -13,13 +13,22 @@
     "editor.fontSize": 15.7,
     "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": true,
-    // * FILETYPE SPECIFIC SETTINGS
     // * VSCODE-NEOVIM SETTINGS
     // ! Most settings are managed in external init.vim -> ~/.config/vscode_vim/init.vim
     // ! If opening external init.vim with neovim use command:
     // ! nvim -u ~/.config/vscode_vim/init.vim ~/.config/vscode_vim/init.vim
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/philthy/.config/vscode_vim/init.vim",
+    // * Color customizations
+    "workbench.colorCustomizations": {
+        // Sets search highlight for vim 
+        // Vim Search
+        "editor.findMatchHighlightBackground": "#fcf403",
+        // Vim Incsearch
+        "editor.findMatchBackground": "#fcf403",
+        // Vim Visual
+        "editor.selectionBackground": "#069ca1"
+    },
     // * TERMINAL SETTINGS
     "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.fontSize": 15.4,
