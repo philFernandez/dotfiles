@@ -19,16 +19,33 @@
     // ! nvim -u ~/.config/vscode_vim/init.vim ~/.config/vscode_vim/init.vim
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/philthy/.config/vscode_vim/init.vim",
+    "vscode-neovim.highlightGroups.highlights": {
+        "Directory": "vim",
+        "IncSearch": {
+            "backgroundColor": "vim",
+            "borderColor": "vim"
+        },
+        "Search": {
+            "backgroundColor": "vim",
+            "borderColor": "vim"
+        },
+        "Visual": {
+            "backgroundColor": "vim"
+        },
+        "Conceal": "vim",
+        "Substitute": "vim"
+    },
+    "vscode-neovim.highlightGroups.unknownHighlight": "vim",
     // * Color customizations
-    "workbench.colorCustomizations": {
+    // "workbench.colorCustomizations": {
         // Sets search highlight for vim 
         // Vim Search
-        "editor.findMatchHighlightBackground": "#fcf403",
+        // "editor.findMatchHighlightBackground": "#fcf403",
         // Vim Incsearch
-        "editor.findMatchBackground": "#fcf403",
+        // "editor.findMatchBackground": "#fcf403",
         // Vim Visual
-        "editor.selectionBackground": "#069ca1"
-    },
+        // "editor.selectionBackground": "#069ca1"
+    // },
     // * TERMINAL SETTINGS
     "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.fontSize": 15.4,

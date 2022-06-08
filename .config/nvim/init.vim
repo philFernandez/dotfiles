@@ -8,7 +8,6 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 
-hi IncSearch gui=bold guifg=black guibg=yellow
 
 
 syntax on
@@ -27,3 +26,8 @@ nmap Q :q<cr>
 
 
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=500}
+
+"hi IncSearch gui=bold guifg=black guibg=yellow
+hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow
+
+
