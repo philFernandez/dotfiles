@@ -1,5 +1,4 @@
 {
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // "java.home": "/Users/philthy/SoftwarePackages/jdk-17.0.1.jdk/Contents/Home",
     "files.exclude": {
         "**/.classpath": true,
@@ -13,38 +12,16 @@
     "editor.fontSize": 15.7,
     "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": true,
-    // * VSCODE-NEOVIM SETTINGS
-    // ! Most settings are managed in external init.vim -> ~/.config/vscode_vim/init.vim
-    // ! If opening external init.vim with neovim use command:
-    // ! nvim -u ~/.config/vscode_vim/init.vim ~/.config/vscode_vim/init.vim
-    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/philthy/.config/vscode_vim/init.vim",
-    "vscode-neovim.highlightGroups.highlights": {
-        "Directory": "vim",
-        "IncSearch": {
-            "backgroundColor": "vim",
-            "borderColor": "vim"
-        },
-        "Search": {
-            "backgroundColor": "vim",
-            "borderColor": "vim"
-        },
-        "Visual": {
-            "backgroundColor": "vim"
-        },
-        "Conceal": "vim",
-        "Substitute": "vim"
-    },
     "vscode-neovim.highlightGroups.unknownHighlight": "vim",
     // * Color customizations
     // "workbench.colorCustomizations": {
-        // Sets search highlight for vim 
-        // Vim Search
-        // "editor.findMatchHighlightBackground": "#fcf403",
-        // Vim Incsearch
-        // "editor.findMatchBackground": "#fcf403",
-        // Vim Visual
-        // "editor.selectionBackground": "#069ca1"
+    // Sets search highlight for vim 
+    // Vim Search
+    // "editor.findMatchHighlightBackground": "#fcf403",
+    // Vim Incsearch
+    // "editor.findMatchBackground": "#fcf403",
+    // Vim Visual
+    // "editor.selectionBackground": "#069ca1"
     // },
     // * TERMINAL SETTINGS
     "terminal.integrated.tabs.enabled": false,
@@ -154,6 +131,16 @@
     "liveServer.settings.donotShowInfoMsg": true,
     "javascript.format.semicolons": "insert",
     "editor.formatOnSave": true,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/Users/philthy/.config/vscode_vim/vimrc",
+    "vim.searchHighlightColor": "yellow",
+    "vim.searchHighlightTextColor": "black",
+    "vim.hlsearch": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+    "vim.highlightedyank.duration": 400,
+    "vim.leader": ",",
+    "vim.showMarksInGutter": true, // :delmarks! to delete all marks
     "cSpell.userWords": [
         "classname",
         "dlat",
@@ -175,6 +162,7 @@
     "javascript.suggest.paths": false,
     "security.workspace.trust.untrustedFiles": "open",
     "cSpell.enableFiletypes": [
+        "!jsonc",
         "proto3"
     ],
     "code-runner.clearPreviousOutput": true,
