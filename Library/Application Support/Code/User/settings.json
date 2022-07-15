@@ -1,5 +1,5 @@
 {
-    // "java.home": "/Users/philthy/SoftwarePackages/jdk-17.0.1.jdk/Contents/Home",
+    "java.inlayHints.parameterNames.enabled": "none",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
