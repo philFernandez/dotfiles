@@ -66,7 +66,6 @@ alias upgrade='brew upgrade'
 alias outdated='brew outdated'
 # Git {{{2
 alias gls="git ls-files"
-alias gce="git commit -a --allow-empty-message -m ''"
 alias gzap='git checkout .'
 alias glor='LESS+=-N git log --oneline --decorate --reverse'
 alias gst='git status'
@@ -79,6 +78,7 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gbd='git branch -d'
 alias gcam='git commit -a -m'
+alias gcame="git commit -a --allow-empty-message -m ''"
 alias glgp='git log --stat -p'
 alias glg='git log --stat'
 alias glgg='git log --graph'
