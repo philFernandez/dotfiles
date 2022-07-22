@@ -27,6 +27,7 @@ alias ek="$EDITOR ~/.config/kitty/kitty.conf"
 alias ez="$EDITOR ~/.zshenv"
 alias evv="nvim -u ~/.config/vscode_vim/init.vim ~/.config/vscode_vim/init.vim"
 alias evn="nvim ~/.config/nvim/init.vim"
+alias vim="nvim"
 
 # Navigating and Displaying and File Things {{{2
 alias md='mkdir -p'

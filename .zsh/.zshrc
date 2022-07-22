@@ -73,7 +73,7 @@ setopt \
 export SAVEHIST=500000
 export HISTSIZE=500000
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-export EDITOR=/opt/homebrew/bin/vim
+export EDITOR=nvim
 export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD 2> /dev/null || fd . -HI)'
 export FZF_DEFAULT_OPTS="--color=hl:120,gutter:35,\
 pointer:220,hl+:118,fg:251,fg+:bright-blue,\

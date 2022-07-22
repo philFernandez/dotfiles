@@ -6,7 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'lifepillar/vim-mucomplete'
+"Plug 'lifepillar/vim-mucomplete'
 Plug 'preservim/nerdcommenter'
 Plug 'fladson/vim-kitty'
 Plug 'tpope/vim-surround'
