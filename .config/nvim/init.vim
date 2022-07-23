@@ -30,7 +30,7 @@ lua require('jc').setup{}
 
 set completeopt=menu,menuone,noselect
 
-color OceanicNext
+color solarized8_high
 
 set title
 set termguicolors
