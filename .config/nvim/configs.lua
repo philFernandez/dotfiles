@@ -1,4 +1,10 @@
+-- lsp-format +++++++++++++++++++++++++++++++++++++++++++++++++
+require("lsp-format").setup {}
 
+require "lspconfig".gopls.setup { on_attach = require "lsp-format".on_attach }
+
+
+-- nvim-treesitter ++++++++++++++++++++++++++++++++++++++++++++
 require'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
     -- ensure_installed = { "java", "vim" },
@@ -31,7 +37,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 
--- Setup nvim-cmp.
+-- nvim-cmp +++++++++++++++++++++++++++++++++++++++++++++++++++
 local cmp = require'cmp'
 
 cmp.setup({

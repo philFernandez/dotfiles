@@ -14,6 +14,9 @@ Plug 'junegunn/fzf.vim'
 Plug '/opt/homebrew/opt/fzf'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'lukas-reineke/lsp-format.nvim'
 
 " See https://github.com/artur-shaik/jc.nvim for info on setting up/getting
 " auto-comp working
@@ -80,8 +83,9 @@ nnoremap <silent> <leader><space> :nohl<cr>
 nnoremap <space> A
 nnoremap sa ggVG
 
-nnoremap <silent> bn :bNext<cr>
+nnoremap <silent> bn :bnext<cr>
 nnoremap <silent> bp :bprevious<cr>
+noremap <silent> CC :close!<CR>
 nmap Q :q<cr>
 vnoremap CV "*y
 nnoremap CP "*p
@@ -91,7 +95,7 @@ nnoremap <silent> <leader>l :Buf<CR>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
-
+au BufWritePre * :%s/\s\+$//e
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=500}
 
 "hi IncSearch gui=bold guifg=black guibg=yellow
