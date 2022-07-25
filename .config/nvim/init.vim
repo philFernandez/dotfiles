@@ -37,6 +37,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='kalisi'
 
 set title
+set noshowmode
 set termguicolors
 set number
 set ruler
