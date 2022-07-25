@@ -1,5 +1,4 @@
 let mapleader=","
-syntax enable
 
 
 call plug#begin(stdpath('data') . '/plugged')
@@ -84,6 +83,7 @@ vnoremap CV "*y
 nnoremap CP "*p
 nnoremap J }
 nnoremap K {
+nnoremap <silent> <leader>l :Buf<CR>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
