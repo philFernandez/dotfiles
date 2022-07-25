@@ -13,11 +13,13 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf.vim'
 Plug '/opt/homebrew/opt/fzf'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " See https://github.com/artur-shaik/jc.nvim for info on setting up/getting
 " auto-comp working
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp' 
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'puremourning/vimspector'
