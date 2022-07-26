@@ -9,11 +9,12 @@ Plug 'preservim/nerdcommenter'
 Plug 'fladson/vim-kitty'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-vinegar'
+Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf.vim'
 Plug '/opt/homebrew/opt/fzf'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
@@ -31,10 +32,7 @@ call plug#end()
 
 set completeopt=menu,menuone,noselect
 
-color molokayo
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme='kalisi'
+color nightfox
 
 set title
 set noshowmode
@@ -89,6 +87,7 @@ nnoremap CP "*p
 nnoremap J }
 nnoremap K {
 nnoremap <silent> <leader>l :Buf<CR>
+nnoremap <silent> <leader>f :NvimTreeToggle<cr>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
