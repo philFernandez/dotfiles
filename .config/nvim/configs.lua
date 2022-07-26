@@ -43,7 +43,7 @@ require('lualine').setup {
   },
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
+  extensions = {'fzf'}
 }
 
 -- java-lsp +++++++++++++++++++++++++++++++++++++++++++++++++++

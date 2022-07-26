@@ -17,7 +17,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-
+Plug 'machakann/vim-highlightedyank'
 " See https://github.com/artur-shaik/jc.nvim for info on setting up/getting
 " auto-comp working
 Plug 'neovim/nvim-lspconfig'
@@ -80,7 +80,8 @@ nnoremap sa ggVG
 
 nnoremap <silent> bn :bnext<cr>
 nnoremap <silent> bp :bprevious<cr>
-noremap <silent> CC :close!<CR>
+nnoremap <silent> bd :bwipeout<CR>
+nnoremap <silent> CC :close!<CR>
 nmap Q :q<cr>
 vnoremap CV "*y
 nnoremap CP "*p
@@ -94,12 +95,12 @@ nnoremap <silent> <leader>s :source ~/.config/nvim/init.vim<cr>
 nnoremap <silent> <C-1> :LualineBuffersJump 1<cr>
 nnoremap <silent> <C-2> :LualineBuffersJump 2<cr>
 nnoremap <silent> <C-3> :LualineBuffersJump 3<cr>
-nnoremap <silent> <C-1> :LualineBuffersJump 4<cr>
-nnoremap <silent> <C-2> :LualineBuffersJump 5<cr>
-nnoremap <silent> <C-3> :LualineBuffersJump 6<cr>
-nnoremap <silent> <C-1> :LualineBuffersJump 7<cr>
-nnoremap <silent> <C-2> :LualineBuffersJump 8<cr>
-nnoremap <silent> <C-3> :LualineBuffersJump 9<cr>
+nnoremap <silent> <C-4> :LualineBuffersJump 4<cr>
+nnoremap <silent> <C-5> :LualineBuffersJump 5<cr>
+nnoremap <silent> <C-6> :LualineBuffersJump 6<cr>
+nnoremap <silent> <C-7> :LualineBuffersJump 7<cr>
+nnoremap <silent> <C-8> :LualineBuffersJump 8<cr>
+nnoremap <silent> <C-9> :LualineBuffersJump 9<cr>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
@@ -108,7 +109,6 @@ let g:vimspector_enable_mappings = 'HUMAN'
 
 " Format file on sync (using lsp?)
 au BufWritePre * lua vim.lsp.buf.formatting_sync()
-au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=500}
 
 "hi IncSearch gui=bold guifg=black guibg=yellow
 hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow
