@@ -16,7 +16,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'lukas-reineke/lsp-format.nvim'
 
 " See https://github.com/artur-shaik/jc.nvim for info on setting up/getting
 " auto-comp working
@@ -29,8 +28,6 @@ Plug 'artur-shaik/jc.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
-
-lua require('jc').setup{}
 
 set completeopt=menu,menuone,noselect
 
@@ -95,7 +92,11 @@ nnoremap <silent> <leader>l :Buf<CR>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
-au BufWritePre * :%s/\s\+$//e
+" Delete whitespace on save
+"au BufWritePre * :%s/\s\+$//e
+
+" Format file on sync (using lsp?)
+au BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=500}
 
 "hi IncSearch gui=bold guifg=black guibg=yellow
