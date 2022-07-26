@@ -19,15 +19,16 @@ alias ccam='config commit -a -m'
 alias czap='(cd && config checkout .)'
 alias clo="config log --all --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr)'"
 # Config File Shortcuts {{{2
-alias ev="$EDITOR ~/.vimrc"
+alias ev="$EDITOR ~/.config/nvim/init.vim"
+alias evl="$EDITOR ~/.config/nvim/configs.lua"
 alias ep="$EDITOR ~/.zsh/aliases.zsh"
 alias el="$EDITOR ~/.zsh/.zlogin"
 alias rc="$EDITOR ~/.zsh/.zshrc"
 alias ek="$EDITOR ~/.config/kitty/kitty.conf"
 alias ez="$EDITOR ~/.zshenv"
-alias evv="nvim -u ~/.config/vscode_vim/init.vim ~/.config/vscode_vim/init.vim"
-alias evn="nvim ~/.config/nvim/init.vim ~/.config/nvim/configs.lua"
-alias vim="nvim"
+alias evv="$EDITOR -u ~/.config/vscode_vim/init.vim ~/.config/vscode_vim/init.vim"
+alias vim="$EDITOR"
+alias vi="$EDITOR"
 
 # Navigating and Displaying and File Things {{{2
 alias md='mkdir -p'
