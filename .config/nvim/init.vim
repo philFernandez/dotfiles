@@ -88,6 +88,7 @@ nnoremap J }
 nnoremap K {
 nnoremap <silent> <leader>l :Buf<CR>
 nnoremap <silent> <leader>f :NvimTreeToggle<cr>
+nnoremap <silent> <leader>s :source ~/.config/nvim/init.vim<cr>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
@@ -95,7 +96,7 @@ let g:vimspector_enable_mappings = 'HUMAN'
 "au BufWritePre * :%s/\s\+$//e
 
 " Format file on sync (using lsp?)
-au BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+au BufWritePre * lua vim.lsp.buf.formatting_sync()
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=500}
 
 "hi IncSearch gui=bold guifg=black guibg=yellow
