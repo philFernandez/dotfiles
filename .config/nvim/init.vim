@@ -104,6 +104,9 @@ nnoremap <silent> <leader>9 :LualineBuffersJump 9<cr>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
+" Disable automatic comments
+au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " Delete whitespace on save
 "au BufWritePre * :%s/\s\+$//e
 
