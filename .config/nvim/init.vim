@@ -30,6 +30,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
+" Load up lua config file. This line has to be right below VimPlug list.
+luafile ~/.config/nvim/configs.lua
+
 set completeopt=menu,menuone,noselect
 
 color nightfox
@@ -102,7 +105,9 @@ nnoremap <silent> <leader>7 :LualineBuffersJump 7<cr>
 nnoremap <silent> <leader>8 :LualineBuffersJump 8<cr>
 nnoremap <silent> <leader>9 :LualineBuffersJump 9<cr>
 
+
 let g:vimspector_enable_mappings = 'HUMAN'
+
 
 " Disable automatic comments
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -134,4 +139,3 @@ augroup OnColorScheme
 augroup END
 " -------------------------------------------------------
 
-luafile ~/.config/nvim/configs.lua

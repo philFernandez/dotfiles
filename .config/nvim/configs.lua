@@ -1,7 +1,6 @@
 -- nvim-tree ++++++++++++++++++++++++++++++++++++++++++++++++++
 require("nvim-tree").setup()
 
-
 -- lua-line +++++++++++++++++++++++++++++++++++++++++++++++++++
 require('lualine').setup {
   options = {
@@ -49,7 +48,6 @@ require('lualine').setup {
 -- java-lsp +++++++++++++++++++++++++++++++++++++++++++++++++++
 require('jc').setup{}
 
-
 -- nvim-treesitter ++++++++++++++++++++++++++++++++++++++++++++
 require'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
@@ -81,7 +79,6 @@ require'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = {"vim"},
     },
 }
-
 
 -- nvim-cmp +++++++++++++++++++++++++++++++++++++++++++++++++++
 local cmp = require'cmp'
@@ -167,5 +164,16 @@ cmp.setup.cmdline(':', {
     }, {
         { name = 'cmdline' }
     })
+})
+
+-- nightfox +++++++++++++++++++++++++++++++++++++++++++++++++++
+require('nightfox').setup({
+    options = {
+        styles = {
+            comments="italic",
+            keywords="bold",
+            types="bold,italic"
+        }
+    }
 })
 
