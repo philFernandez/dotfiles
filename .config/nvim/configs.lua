@@ -1,55 +1,58 @@
+-- nvim-lsp-installer +++++++++++++++++++++++++++++++++++++++++
+require("nvim-lsp-installer").setup {}
+
 -- nvim-tree ++++++++++++++++++++++++++++++++++++++++++++++++++
 require("nvim-tree").setup()
 
 -- lua-line +++++++++++++++++++++++++++++++++++++++++++++++++++
 require('lualine').setup {
-  options = {
-    icons_enabled = true,
-    theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-    disabled_filetypes = {
-      statusline = {},
-      winbar = {},
+    options = {
+        icons_enabled = true,
+        theme = 'auto',
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
+        disabled_filetypes = {
+            statusline = {},
+            winbar = {},
+        },
+        always_divide_middle = true,
+        globalstatus = true,
+        refresh = {
+            statusline = 1000,
+            tabline = 1000,
+            winbar = 1000,
+        }
     },
-    always_divide_middle = true,
-    globalstatus = true,
-    refresh = {
-      statusline = 1000,
-      tabline = 1000,
-      winbar = 1000,
-    }
-  },
-  sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', {'fileformat', icons_enabled=false}, 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
-    lualine_y = {},
-    lualine_z = {}
-  },
-  tabline = {
-      lualine_a = {'buffers'},
-      lualine_z = {'tabs'}
-  },
-  winbar = {},
-  inactive_winbar = {},
-  extensions = {'fzf'}
+    sections = {
+        lualine_a = { 'mode' },
+        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_c = { 'filename' },
+        lualine_x = { 'encoding', { 'fileformat', icons_enabled = false }, 'filetype' },
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' }
+    },
+    inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = { 'filename' },
+        lualine_x = { 'location' },
+        lualine_y = {},
+        lualine_z = {}
+    },
+    tabline = {
+        lualine_a = { 'buffers' },
+        lualine_z = { 'tabs' }
+    },
+    winbar = {},
+    inactive_winbar = {},
+    extensions = { 'fzf' }
 }
 
 -- java-lsp +++++++++++++++++++++++++++++++++++++++++++++++++++
-require('jc').setup{}
+require('jc').setup {}
 
 -- nvim-treesitter ++++++++++++++++++++++++++++++++++++++++++++
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
     -- ensure_installed = { "java", "vim" },
 
@@ -76,12 +79,27 @@ require'nvim-treesitter.configs'.setup {
         -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
         -- Using this option may slow down your editor, and you may see some duplicate highlights.
         -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = {"vim"},
+        additional_vim_regex_highlighting = { "vim" },
     },
 }
+-- nvim-lspconfig +++++++++++++++++++++++++++++++++++++++++++++
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+local lspconfig = require('lspconfig')
+
+-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+local servers = { 'vimls', 'sumneko_lua' } -- <- ADD NEW LSP SERVER NAMES HERE
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup {
+        -- on_attach = my_custom_on_attach,
+        capabilities = capabilities,
+    }
+end
 
 -- nvim-cmp +++++++++++++++++++++++++++++++++++++++++++++++++++
-local cmp = require'cmp'
+local cmp = require 'cmp'
 
 cmp.setup({
     snippet = {
@@ -170,10 +188,9 @@ cmp.setup.cmdline(':', {
 require('nightfox').setup({
     options = {
         styles = {
-            comments="italic",
-            keywords="bold",
-            types="bold,italic"
+            comments = "italic",
+            keywords = "bold",
+            types = "bold,italic"
         }
     }
 })
-
