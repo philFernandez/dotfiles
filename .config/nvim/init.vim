@@ -92,15 +92,15 @@ nnoremap <silent> <leader>f :NvimTreeToggle<cr>
 nnoremap <silent> <leader>s :source ~/.config/nvim/init.vim<cr>
 
 " Go to Buffers
-nnoremap <silent> <C-1> :LualineBuffersJump 1<cr>
-nnoremap <silent> <C-2> :LualineBuffersJump 2<cr>
-nnoremap <silent> <C-3> :LualineBuffersJump 3<cr>
-nnoremap <silent> <C-4> :LualineBuffersJump 4<cr>
-nnoremap <silent> <C-5> :LualineBuffersJump 5<cr>
-nnoremap <silent> <C-6> :LualineBuffersJump 6<cr>
-nnoremap <silent> <C-7> :LualineBuffersJump 7<cr>
-nnoremap <silent> <C-8> :LualineBuffersJump 8<cr>
-nnoremap <silent> <C-9> :LualineBuffersJump 9<cr>
+nnoremap <silent> <leader>1 :LualineBuffersJump 1<cr>
+nnoremap <silent> <leader>2 :LualineBuffersJump 2<cr>
+nnoremap <silent> <leader>3 :LualineBuffersJump 3<cr>
+nnoremap <silent> <leader>4 :LualineBuffersJump 4<cr>
+nnoremap <silent> <leader>5 :LualineBuffersJump 5<cr>
+nnoremap <silent> <leader>6 :LualineBuffersJump 6<cr>
+nnoremap <silent> <leader>7 :LualineBuffersJump 7<cr>
+nnoremap <silent> <leader>8 :LualineBuffersJump 8<cr>
+nnoremap <silent> <leader>9 :LualineBuffersJump 9<cr>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
