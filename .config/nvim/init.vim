@@ -1,5 +1,6 @@
 let mapleader=","
 
+" Vim Plug {{{1
 
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -32,6 +33,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
+" Vim Settings {{{1
+
 " Load up lua config file. This line has to be right below VimPlug list.
 luafile ~/.config/nvim/configs.lua
 
@@ -49,8 +52,6 @@ set splitright
 set splitbelow
 set timeoutlen=1000
 set cursorline
-
-" Vim Settings {{{1
 set mouse=a
 set backspace=indent,eol,start
 set confirm
@@ -79,6 +80,7 @@ set smartcase
 set incsearch
 set wrapscan
 
+" Keymaps {{{1
 nnoremap <silent> <leader><space> :nohl<cr>
 nnoremap <space> A
 nnoremap sa ggVG
@@ -107,6 +109,8 @@ nnoremap <silent> <leader>7 :LualineBuffersJump 7<cr>
 nnoremap <silent> <leader>8 :LualineBuffersJump 8<cr>
 nnoremap <silent> <leader>9 :LualineBuffersJump 9<cr>
 
+
+" Autocmds, variables, functions {{{1
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
@@ -141,3 +145,4 @@ augroup OnColorScheme
 augroup END
 " -------------------------------------------------------
 
+" vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
