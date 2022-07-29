@@ -26,6 +26,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'puremourning/vimspector'
 Plug 'artur-shaik/jc.nvim'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
