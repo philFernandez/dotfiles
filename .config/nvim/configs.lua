@@ -90,16 +90,13 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'vimls', 'tsserver' } -- <- ADD NEW LSP SERVER NAMES HERE
+local servers = { 'vimls', 'tsserver', 'pylsp' } -- <- ADD NEW LSP SERVER NAMES HERE
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         -- on_attach = my_custom_on_attach,
         capabilities = capabilities,
     }
 end
-
--- Wont work if setup in above for loop.
-lspconfig.jedi_language_server.setup{}
 
 -- nvim-cmp +++++++++++++++++++++++++++++++++++++++++++++++++++
 local has_words_before = function()
