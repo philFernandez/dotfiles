@@ -167,4 +167,5 @@
         "proto3"
     ],
     "code-runner.clearPreviousOutput": true,
+    "vsicons.dontShowNewVersionMessage": true,
 }
