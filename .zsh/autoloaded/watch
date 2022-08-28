@@ -1,5 +1,0 @@
-# watch
-
-command watch -n 0.1 --exec zsh -c "$*"
-
-# vim: ft=zsh
