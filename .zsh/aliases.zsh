@@ -6,6 +6,7 @@ alias cpdir="pwd | tr -d '\n' | pbcopy"
 alias ds='du -sh 2> /dev/null'
 alias ip="ifconfig | rg '\d{3}\.\d{3}\.\d\.\d{2}\b' -o --color=never"
 alias timestamp="date +'%A %B %e %G %r'"
+alias python=python3
 # Dotfiles Version Control {{{2
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias confls='config ls-files'

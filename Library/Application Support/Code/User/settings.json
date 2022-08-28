@@ -142,6 +142,7 @@
     "vim.leader": ",",
     "vim.showMarksInGutter": true, // :delmarks! to delete all marks
     "cSpell.userWords": [
+        "arrs",
         "classname",
         "dlat",
         "esbuild",
@@ -156,6 +157,7 @@
         "protobuf",
         "protoc",
         "protoimpl",
+        "SYSTEMPATH",
         "WASD"
     ],
     "workbench.startupEditor": "none",
