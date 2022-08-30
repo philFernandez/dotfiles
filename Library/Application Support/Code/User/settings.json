@@ -12,7 +12,6 @@
     "editor.fontSize": 15.7,
     "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": true,
-    "vscode-neovim.highlightGroups.unknownHighlight": "vim",
     // * Color customizations
     // "workbench.colorCustomizations": {
     // Sets search highlight for vim 
@@ -169,5 +168,10 @@
         "proto3"
     ],
     "code-runner.clearPreviousOutput": true,
+    // "code-runner.executorMap": {
+    //     "python": "python3 -u",
+    // },
     "vsicons.dontShowNewVersionMessage": true,
+    // Turn of the Trust blah blah warning thing
+    "security.workspace.trust.enabled": false
 }

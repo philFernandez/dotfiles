@@ -71,5 +71,9 @@
         "key": "shift+cmd+l",
         "command": "-addCursorsAtSearchResults",
         "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
+    {
+        "key": "cmd+e cmd+p",
+        "command": "sqltools.executeCurrentQuery"
     }
 ]
