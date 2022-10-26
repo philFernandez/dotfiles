@@ -71,6 +71,7 @@ setopt \
 
 # Exports {{{1
 export SAVEHIST=500000
+export RANGER_LOAD_DEFAULT_RC=false
 export HISTSIZE=500000
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export EDITOR=nvim

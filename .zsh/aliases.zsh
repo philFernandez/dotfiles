@@ -1,5 +1,6 @@
 # Aliases {{{1
 # Misc {{{2
+alias tree='tree -A'
 alias reload='exec zsh'
 alias q='exit'
 alias cpdir="pwd | tr -d '\n' | pbcopy"
