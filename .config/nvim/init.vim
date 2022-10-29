@@ -17,6 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug '/opt/homebrew/opt/fzf'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+Plug 'EdenEast/nightfox.nvim'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'machakann/vim-highlightedyank'
@@ -40,7 +41,6 @@ call plug#end()
 luafile ~/.config/nvim/configs.lua
 
 set completeopt=menu,menuone,noselect
-
 set termguicolors
 set title
 set noshowmode
@@ -87,10 +87,8 @@ nnoremap sa ggVG
 nnoremap <silent> bn :bnext<cr>
 nnoremap <silent> bp :bprevious<cr>
 nnoremap <silent> bd :bwipeout<CR>
-nnoremap <silent> CC :close!<CR>
 nmap Q :q<cr>
 vnoremap CV "*y
-nnoremap CP "*p
 nnoremap J }
 nnoremap K {
 nnoremap <silent> <leader>l :Buf<CR>

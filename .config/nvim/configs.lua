@@ -1,7 +1,75 @@
 -- vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
 
--- {{{ onenord theme +++++++++++++++++++++++++++++++++++++++++++++++++++++
-require('onenord').setup()
+-- {{{ colorscheme +++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- Valid styles
+--bold
+--underline
+--undercurl	    curly underline
+--underdouble	double underline
+--underdotted	dotted underline
+--underdashed	dashed underline
+--strikethrough
+--reverse
+--inverse		same as reverse
+--italic
+--standout
+--nocombine	override attributes instead of combining them
+--NONE		no attributes used (used to reset it)
+
+-- Calls colorscheme automagically
+--require('onenord').setup({
+    --theme = nil, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+    --borders = true, -- Split window borders
+    --fade_nc = false, -- Fade non-current windows, making them more distinguishable
+    ---- Style that is applied to various groups: see `highlight-args` for options
+    --styles = {
+        --comments = "italic",
+        --strings = "bold",
+        --keywords = "bold",
+        --functions = "bold",
+        --variables = "bold",
+        --diagnostics = "undercurl",
+    --},
+    --disable = {
+        --background = false, -- Disable setting the background color
+        --cursorline = false, -- Disable the cursorline
+        --eob_lines = true, -- Hide the end-of-buffer lines
+    --},
+    ---- Inverse highlight for different groups
+    --inverse = {
+        --match_paren = false,
+    --},
+    --custom_highlights = {}, -- Overwrite default highlight groups
+    --custom_colors = {}, -- Overwrite default colors
+--})
+
+require('nightfox').setup({
+  options = {
+    styles = {              
+      comments = "italic",    
+      conditionals = "bold",
+      constants = "bold",
+      functions = "bold",
+      keywords = "bold",
+      numbers = "NONE",
+      operators = "bold",
+      strings = "NONE",
+      types = "NONE",
+      variables = "NONE",
+    },
+    inverse = {             -- Inverse highlight for different types
+      match_paren = false,
+      visual = false,
+      search = false,
+    },
+    modules = {},           
+  },
+  palettes = {},
+  specs = {},
+  groups = {},
+})
+vim.cmd("colorscheme nightfox")
+
 -- }}}
 
 -- {{{ nvim-lsp-installer +++++++++++++++++++++++++++++++++++++++++
