@@ -5,9 +5,10 @@ let mapleader=","
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'jiangmiao/auto-pairs'
-Plug 'rafi/awesome-vim-colorschemes'
+Plug 'akinsho/bufferline.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'fladson/vim-kitty'
+Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
@@ -15,7 +16,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'junegunn/fzf.vim'
 Plug '/opt/homebrew/opt/fzf'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'EdenEast/nightfox.nvim'
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'machakann/vim-highlightedyank'
@@ -40,11 +41,9 @@ luafile ~/.config/nvim/configs.lua
 
 set completeopt=menu,menuone,noselect
 
-color nightfox
-
+set termguicolors
 set title
 set noshowmode
-set termguicolors
 set number
 set ruler
 set ttimeoutlen=0
@@ -95,6 +94,7 @@ nnoremap CP "*p
 nnoremap J }
 nnoremap K {
 nnoremap <silent> <leader>l :Buf<CR>
+nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <leader>f :NvimTreeToggle<cr>
 nnoremap <silent> <leader>s :source ~/.config/nvim/init.vim<cr>
 

@@ -1,10 +1,36 @@
--- nvim-lsp-installer +++++++++++++++++++++++++++++++++++++++++
+-- vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
+
+-- {{{ onenord theme +++++++++++++++++++++++++++++++++++++++++++++++++++++
+require('onenord').setup()
+-- }}}
+
+-- {{{ nvim-lsp-installer +++++++++++++++++++++++++++++++++++++++++
 require("nvim-lsp-installer").setup {}
+-- }}}
 
--- nvim-tree ++++++++++++++++++++++++++++++++++++++++++++++++++
+--{{{ nvim-tree ++++++++++++++++++++++++++++++++++++++++++++++++++
 require("nvim-tree").setup()
+-- }}}
 
--- lua-line +++++++++++++++++++++++++++++++++++++++++++++++++++
+-- {{{ bufferline +++++++++++++++++++++++++++++++++++++++++++++++++
+vim.opt.termguicolors = true
+require('bufferline').setup {
+    options = {
+        diagnostics = "nvim_lsp",
+        offsets = {
+            {
+                filetype = "NvimTree",
+                text = "Nvim Tree", 
+                text_align = "left",
+                separator = true
+            }
+        },
+        --separator_style = "slant" | "thick" | "thin" | { 'any', 'any' },
+    }
+}
+-- }}}
+
+-- {{{ lua-line +++++++++++++++++++++++++++++++++++++++++++++++++++
 require('lualine').setup {
     options = {
         icons_enabled = true,
@@ -40,18 +66,21 @@ require('lualine').setup {
         lualine_z = {}
     },
     tabline = {
-        lualine_a = { 'buffers' },
-        lualine_z = { 'tabs' }
+        --lualine_a = { 'buffers' },
+        --lualine_z = { 'tabs' }
     },
-    winbar = {},
+    winbar = {
+    },
     inactive_winbar = {},
     extensions = { 'fzf' }
 }
+-- }}}
 
--- java-lsp +++++++++++++++++++++++++++++++++++++++++++++++++++
+-- {{{ java-lsp +++++++++++++++++++++++++++++++++++++++++++++++++++
 require('jc').setup {}
+--}}}
 
--- nvim-treesitter ++++++++++++++++++++++++++++++++++++++++++++
+-- {{{ nvim-treesitter ++++++++++++++++++++++++++++++++++++++++++++
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
     -- ensure_installed = { "java", "vim" },
@@ -82,10 +111,11 @@ require 'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = { "vim" },
     },
 }
--- nvim-lspconfig +++++++++++++++++++++++++++++++++++++++++++++
+-- }}}
+
+-- {{{ nvim-lspconfig +++++++++++++++++++++++++++++++++++++++++++++
 -- Add additional capabilities supported by nvim-cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local lspconfig = require('lspconfig')
 
@@ -97,8 +127,9 @@ for _, lsp in ipairs(servers) do
         capabilities = capabilities,
     }
 end
+-- }}}
 
--- nvim-cmp +++++++++++++++++++++++++++++++++++++++++++++++++++
+-- {{{ nvim-cmp +++++++++++++++++++++++++++++++++++++++++++++++++++
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
@@ -190,14 +221,4 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     })
 })
-
--- nightfox +++++++++++++++++++++++++++++++++++++++++++++++++++
-require('nightfox').setup({
-    options = {
-        styles = {
-            comments = "italic",
-            keywords = "bold",
-            types = "bold,italic"
-        }
-    }
-})
+-- }}}
