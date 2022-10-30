@@ -3,7 +3,6 @@ let mapleader=","
 " Vim Plug {{{1
 
 call plug#begin(stdpath('data') . '/plugged')
-
 Plug 'jiangmiao/auto-pairs'
 Plug 'akinsho/bufferline.nvim'
 Plug 'preservim/nerdcommenter'
