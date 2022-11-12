@@ -4,6 +4,7 @@ let mapleader=","
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'jiangmiao/auto-pairs'
+Plug 'ap/vim-css-color'
 Plug 'akinsho/bufferline.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'fladson/vim-kitty'
@@ -83,28 +84,28 @@ nnoremap <silent> <leader><space> :nohl<cr>
 nnoremap <space> A
 nnoremap sa ggVG
 
-nnoremap <silent> bn :bnext<cr>
-nnoremap <silent> bp :bprevious<cr>
+nnoremap <silent> bn :BufferLineCycleNext<cr>
+nnoremap <silent> bp :BufferLineCyclePrev<cr>
 nnoremap <silent> bd :bwipeout<CR>
 nmap Q :q<cr>
 vnoremap CV "*y
 nnoremap J }
 nnoremap K {
-nnoremap <silent> <leader>l :Buf<CR>
+nnoremap <silent> <leader>l :Buffers<CR>
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <leader>f :NvimTreeToggle<cr>
 nnoremap <silent> <leader>s :source ~/.config/nvim/init.vim<cr>
 
 " Go to Buffers
-nnoremap <silent> <leader>1 :LualineBuffersJump 1<cr>
-nnoremap <silent> <leader>2 :LualineBuffersJump 2<cr>
-nnoremap <silent> <leader>3 :LualineBuffersJump 3<cr>
-nnoremap <silent> <leader>4 :LualineBuffersJump 4<cr>
-nnoremap <silent> <leader>5 :LualineBuffersJump 5<cr>
-nnoremap <silent> <leader>6 :LualineBuffersJump 6<cr>
-nnoremap <silent> <leader>7 :LualineBuffersJump 7<cr>
-nnoremap <silent> <leader>8 :LualineBuffersJump 8<cr>
-nnoremap <silent> <leader>9 :LualineBuffersJump 9<cr>
+nnoremap <silent> <leader>1 :BufferLineGoToBuffer 1<cr>
+nnoremap <silent> <leader>2 :BufferLineGoToBuffer 2<cr>
+nnoremap <silent> <leader>3 :BufferLineGoToBuffer 3<cr>
+nnoremap <silent> <leader>4 :BufferLineGoToBuffer 4<cr>
+nnoremap <silent> <leader>5 :BufferLineGoToBuffer 5<cr>
+nnoremap <silent> <leader>6 :BufferLineGoToBuffer 6<cr>
+nnoremap <silent> <leader>7 :BufferLineGoToBuffer 7<cr>
+nnoremap <silent> <leader>8 :BufferLineGoToBuffer 8<cr>
+nnoremap <silent> <leader>9 :BufferLineGoToBuffer 9<cr>
 
 
 " Autocmds, variables, functions {{{1

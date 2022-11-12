@@ -1,5 +1,6 @@
 # Aliases {{{1
 # Misc {{{2
+alias rga='rg --no-ignore -ia 2>/dev/null'
 alias tree='tree -A'
 alias reload='exec zsh'
 alias q='exit'

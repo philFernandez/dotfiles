@@ -77,7 +77,195 @@ require("nvim-lsp-installer").setup {}
 -- }}}
 
 --{{{ nvim-tree ++++++++++++++++++++++++++++++++++++++++++++++++++
-require("nvim-tree").setup()
+
+
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("nvim-tree").setup({ -- BEGIN_NVIM-TREE
+    sort_by = "case_sensitive",
+    view = {
+        adaptive_size = true,
+        mappings = {
+            list = {
+                -- user mappings go here
+                { key = "u", action = "dir_up" },
+                { key = "<C-T>", action = "tabnew" }
+            },
+        },
+        float = {
+            enable = false,
+            quit_on_focus_loss = true,
+            open_win_config = {
+                relative = "editor",
+                border = "rounded",
+                width = 60,
+                height = 35,
+                row = 1,
+                col = 1,
+            },
+        },
+    },
+    renderer = {
+        add_trailing = false,
+        group_empty = false,
+        highlight_git = true,
+        full_name = true,
+        indent_markers = {
+            enable = true,
+            inline_arrows = true,
+            icons = {
+                corner = "└",
+                edge = "│",
+                item = "│",
+                bottom = "─",
+                none = " ",
+            },
+        },
+        icons = {
+            webdev_colors = true,
+            git_placement = "before",
+            padding = " ",
+            symlink_arrow = " ➛ ",
+            show = {
+                file = true,
+                folder = true,
+                folder_arrow = true,
+                git = true,
+            },
+            glyphs = {
+                default = "",
+                symlink = "",
+                bookmark = "",
+                folder = {
+                    arrow_closed = "",
+                    arrow_open = "",
+                    default = "",
+                    open = "",
+                    empty = "",
+                    empty_open = "",
+                    symlink = "",
+                    symlink_open = "",
+                },
+                git = {
+                    unstaged = "✗",
+                    staged = "✓",
+                    unmerged = "",
+                    renamed = "➜",
+                    untracked = "★",
+                    deleted = "",
+                    ignored = "◌",
+                },
+            },
+        },
+        special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+        symlink_destination = true,
+    },
+    hijack_directories = {
+        enable = true,
+        auto_open = true,
+    },
+    update_focused_file = {
+        enable = false,
+        update_root = false,
+        ignore_list = {},
+    },
+    ignore_ft_on_setup = {},
+    system_open = {
+        cmd = "",
+        args = {},
+    },
+    diagnostics = {
+        enable = true,
+        show_on_dirs = false,
+        debounce_delay = 50,
+        icons = {
+            hint = "",
+            info = "",
+            warning = "",
+            error = "",
+        },
+    },
+    filters = {
+        dotfiles = false,
+        custom = {},
+        exclude = {},
+    },
+    filesystem_watchers = {
+        enable = true,
+        debounce_delay = 50,
+        ignore_dirs = {},
+    },
+    git = {
+        enable = true,
+        ignore = true,
+        show_on_dirs = true,
+        timeout = 400,
+    },
+    actions = {
+        use_system_clipboard = true,
+        change_dir = {
+            enable = true,
+            global = false,
+            restrict_above_cwd = false,
+        },
+        expand_all = {
+            max_folder_discovery = 300,
+            exclude = {},
+        },
+        file_popup = {
+            open_win_config = {
+                col = 1,
+                row = 1,
+                relative = "cursor",
+                border = "shadow",
+                style = "minimal",
+            },
+        },
+        open_file = {
+            quit_on_open = true,
+            resize_window = true,
+            window_picker = {
+                enable = true,
+                chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+                exclude = {
+                    filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
+                    buftype = { "nofile", "terminal", "help" },
+                },
+            },
+        },
+        remove_file = {
+            close_window = true,
+        },
+    },
+    trash = {
+        cmd = "gio trash",
+        require_confirm = true,
+    },
+    live_filter = {
+        prefix = "[FILTER]: ",
+        always_show_folders = true,
+    },
+    log = {
+        enable = false,
+        truncate = false,
+        types = {
+            all = false,
+            config = false,
+            copy_paste = false,
+            dev = false,
+            diagnostics = false,
+            git = false,
+            profile = false,
+            watcher = false,
+        },
+    },
+    notify = {
+        threshold = vim.log.levels.INFO,
+    },
+}) -- END_NVIM-TREE
+
 -- }}}
 
 -- {{{ bufferline +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -150,8 +338,7 @@ require('jc').setup {}
 
 -- {{{ nvim-treesitter ++++++++++++++++++++++++++++++++++++++++++++
 require 'nvim-treesitter.configs'.setup {
-    -- A list of parser names, or "all"
-    -- ensure_installed = { "java", "vim" },
+    ensure_installed = "all",
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     -- sync_install = false,
@@ -176,7 +363,7 @@ require 'nvim-treesitter.configs'.setup {
         -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
         -- Using this option may slow down your editor, and you may see some duplicate highlights.
         -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = { "vim" },
+        additional_vim_regex_highlighting = { "vim", "php" },
     },
 }
 -- }}}
