@@ -121,6 +121,7 @@ alias -g BIN="~/.bin"
 alias -g NOT="~/Documents/Notes"
 # File Manipulation {{{2
 alias -g CP="|tr -d '\n'|pbcopy"
+alias -g J="|jq"
 alias -g CPL="|pbcopy"
 # Misc {{{2
 alias -g C="|awk END'{print NR}'"

@@ -1,5 +1,8 @@
 let mapleader=","
 
+" VIMWIKI like plugin for neovim
+" jakewvincent/mkdnflow.nvim
+
 " Vim Plug {{{1
 
 call plug#begin(stdpath('data') . '/plugged')
@@ -27,8 +30,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'puremourning/vimspector'
-Plug 'artur-shaik/jc.nvim'
+"Plug 'puremourning/vimspector'
+"Plug 'artur-shaik/jc.nvim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -111,6 +114,10 @@ nnoremap <silent> <leader>9 :BufferLineGoToBuffer 9<cr>
 " Autocmds, variables, functions {{{1
 
 let g:vimspector_enable_mappings = 'HUMAN'
+
+" neovim integrated terminal settings -------
+au TermOpen * setlocal nonumber
+" -------------------------------------------
 
 
 " Disable automatic comments

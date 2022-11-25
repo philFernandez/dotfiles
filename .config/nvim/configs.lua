@@ -333,7 +333,7 @@ require('lualine').setup {
 -- }}}
 
 -- {{{ java-lsp +++++++++++++++++++++++++++++++++++++++++++++++++++
-require('jc').setup {}
+--require('jc').setup {}
 --}}}
 
 -- {{{ nvim-treesitter ++++++++++++++++++++++++++++++++++++++++++++
