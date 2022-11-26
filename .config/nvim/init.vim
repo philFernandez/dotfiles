@@ -1,12 +1,13 @@
 let mapleader=","
 
 " VIMWIKI like plugin for neovim
-" jakewvincent/mkdnflow.nvim
+" jakewvincent/mkdnflow.nvim : already installed. just read the docs
 
 " Vim Plug {{{1
-
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'jiangmiao/auto-pairs'
+Plug 'williamboman/mason.nvim'
+Plug 'jakewvincent/mkdnflow.nvim'
 Plug 'ap/vim-css-color'
 Plug 'akinsho/bufferline.nvim'
 Plug 'preservim/nerdcommenter'
@@ -29,7 +30,6 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'williamboman/nvim-lsp-installer'
 "Plug 'puremourning/vimspector'
 "Plug 'artur-shaik/jc.nvim'
 Plug 'L3MON4D3/LuaSnip'
@@ -141,7 +141,7 @@ function! s:CustomizeColors()
     let cursorline_gui='guifg=white'
     let cursorline_cterm=''
   endif
-  exec 'hi CursorLine ' . cursorline_gui . ' ' . cursorline_cterm
+    exec 'hi CursorLine ' . cursorline_gui . ' ' . cursorline_cterm
 endfunction
 
 augroup OnColorScheme
