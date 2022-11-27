@@ -5,6 +5,7 @@ let mapleader=","
 
 " Vim Plug {{{1
 call plug#begin(stdpath('data') . '/plugged')
+Plug 'mhartington/formatter.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'williamboman/mason.nvim'
 Plug 'jakewvincent/mkdnflow.nvim'
@@ -111,6 +112,12 @@ nnoremap <silent> <leader>8 :BufferLineGoToBuffer 8<cr>
 nnoremap <silent> <leader>9 :BufferLineGoToBuffer 9<cr>
 
 
+" Non-Lua Plugin Configs {{{1
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
+"}}}
+
 " Autocmds, variables, functions {{{1
 
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -126,8 +133,13 @@ au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Delete whitespace on save
 "au BufWritePre * :%s/\s\+$//e
 
-" Format file on sync (using lsp?)
-au BufWritePre * lua vim.lsp.buf.formatting_sync()
+au BufWritePre *.php lua vim.lsp.buf.formatting_sync()
+
+augroup FormatAutogroup
+    autocmd!
+    autocmd BufWritePost * FormatWrite
+augroup END
+
 
 "hi IncSearch gui=bold guifg=black guibg=yellow
 hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow
