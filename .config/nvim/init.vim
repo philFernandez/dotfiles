@@ -1,9 +1,11 @@
+" vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
+
 let mapleader=","
 
 " VIMWIKI like plugin for neovim
 " jakewvincent/mkdnflow.nvim : already installed. just read the docs
 
-" Vim Plug {{{1
+" Vim Plug {{{
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'mhartington/formatter.nvim'
 Plug 'jiangmiao/auto-pairs'
@@ -38,9 +40,9 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
+" }}}
 
-" Vim Settings {{{1
-
+" Vim Settings {{{
 " Load up lua config file. This line has to be right below VimPlug list.
 luafile ~/.config/nvim/configs.lua
 
@@ -67,23 +69,26 @@ set wildmenu
 set linebreak " Don't wrap in middle of word
 set encoding=utf-8
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+" }}}
 
-" Indent Settings {{{1
+" Indent Settings {{{
 set autoindent
 set expandtab
 set shiftround
 set shiftwidth=4
 set smarttab
 set tabstop=4
+" }}}
 
-" Search Settings {{{1
+" Search Settings {{{
 set hlsearch
 set ignorecase
 set smartcase
 set incsearch
 set wrapscan
+" }}}
 
-" Keymaps {{{1
+" Keymaps {{{
 nnoremap <silent> <leader><space> :nohl<cr>
 nnoremap <space> A
 nnoremap sa ggVG
@@ -110,15 +115,15 @@ nnoremap <silent> <leader>6 :BufferLineGoToBuffer 6<cr>
 nnoremap <silent> <leader>7 :BufferLineGoToBuffer 7<cr>
 nnoremap <silent> <leader>8 :BufferLineGoToBuffer 8<cr>
 nnoremap <silent> <leader>9 :BufferLineGoToBuffer 9<cr>
+" }}}
 
-
-" Non-Lua Plugin Configs {{{1
+" Non-Lua Plugin Configs {{{
 let g:minimap_width = 10
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
 "}}}
 
-" Autocmds, variables, functions {{{1
+" Autocmds, variables, functions {{{
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
@@ -161,5 +166,4 @@ augroup OnColorScheme
   autocmd ColorScheme,BufEnter,BufWinEnter * call s:CustomizeColors()
 augroup END
 " -------------------------------------------------------
-
-" vim:foldenable foldmethod=marker foldcolumn=1 foldlevel=0
+" }}}
