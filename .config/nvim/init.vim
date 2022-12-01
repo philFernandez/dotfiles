@@ -34,7 +34,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 "Plug 'puremourning/vimspector'
-"Plug 'artur-shaik/jc.nvim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -117,26 +116,14 @@ nnoremap <silent> <leader>8 :BufferLineGoToBuffer 8<cr>
 nnoremap <silent> <leader>9 :BufferLineGoToBuffer 9<cr>
 " }}}
 
-" Non-Lua Plugin Configs {{{
-let g:minimap_width = 10
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
-"}}}
-
 " Autocmds, variables, functions {{{
-
-let g:vimspector_enable_mappings = 'HUMAN'
 
 " neovim integrated terminal settings -------
 au TermOpen * setlocal nonumber
 " -------------------------------------------
 
-
 " Disable automatic comments
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Delete whitespace on save
-"au BufWritePre * :%s/\s\+$//e
 
 au BufWritePre *.php lua vim.lsp.buf.formatting_sync()
 
@@ -144,7 +131,6 @@ augroup FormatAutogroup
     autocmd!
     autocmd BufWritePost * FormatWrite
 augroup END
-
 
 "hi IncSearch gui=bold guifg=black guibg=yellow
 hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow
