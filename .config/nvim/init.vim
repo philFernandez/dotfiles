@@ -2,15 +2,11 @@
 
 let mapleader=","
 
-" VIMWIKI like plugin for neovim
-" jakewvincent/mkdnflow.nvim : already installed. just read the docs
-
 " Vim Plug {{{
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'mhartington/formatter.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'williamboman/mason.nvim'
-Plug 'jakewvincent/mkdnflow.nvim'
 Plug 'ap/vim-css-color'
 Plug 'akinsho/bufferline.nvim'
 Plug 'preservim/nerdcommenter'
