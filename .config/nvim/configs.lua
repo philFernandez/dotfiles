@@ -84,38 +84,6 @@ require("mason").setup({
 })
 -- }}}
 
--- formatter.nvim {{{
--- Utilities for creating configurations
-local util = require("formatter.util")
-
--- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
-require("formatter").setup({
-	-- Enable or disable logging
-	logging = true,
-	-- Set the log level
-	log_level = vim.log.levels.WARN,
-	-- All formatter configurations are opt-in
-	filetype = {
-		-- Formatter configurations for filetype "lua" go here
-		-- and will be executed in order
-		lua = {
-			-- "formatter.filetypes.lua" defines default configurations for the
-			-- "lua" filetype
-			require("formatter.filetypes.lua").stylua,
-		},
-		python = {
-			require("formatter.filetypes.python").black,
-		},
-		-- Use the special "*" filetype for defining formatter configurations on
-		-- any filetype
-		["*"] = {
-			-- "formatter.filetypes.any" defines default configurations for any
-			-- filetype
-			require("formatter.filetypes.any").remove_trailing_whitespace,
-		},
-	},
-})
--- }}}
 
 --{{{ nvim-tree ++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -415,7 +383,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require("lspconfig")
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { "vimls", "tsserver", "pyright", "intelephense" } -- <- ADD NEW LSP SERVER NAMES HERE
+local servers = { "vimls", "tsserver", "pyright", "intelephense", "cssls", "html" } -- <- ADD NEW LSP SERVER NAMES HERE
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		-- on_attach = my_custom_on_attach,
@@ -515,4 +483,50 @@ cmp.setup.cmdline(":", {
 		{ name = "cmdline" },
 	}),
 })
+-- }}}
+
+-- {{{neovim settings that only work in lua
+
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    signs = {
+      severity_limit = "Hint",
+    },
+    virtual_text = {
+      severity_limit = "Warning",
+      source = true,
+    },
+    underline = {
+        severity_limit = "Warning",
+    },
+    -- float doesn't work for some reason
+  }
+)
+
+
+--vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  --vim.lsp.diagnostic.on_publish_diagnostics, {
+    --signs = {
+      --severity_limit = "Hint",
+    --},
+    --virtual_text = {
+      --severity_limit = "Warning",
+    --},
+  --}
+--)
+
+
+-- OR 
+--see :h vim.diagnostic.config
+
+--vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  --vim.lsp.diagnostic.on_publish_diagnostics, {
+    --underline = true,
+    --virtual_text = false,
+    --signs = true,
+    --update_in_insert = false,
+  --}
+--)
+
 -- }}}

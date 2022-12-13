@@ -4,7 +4,7 @@ let mapleader=","
 
 " Vim Plug {{{
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'mhartington/formatter.nvim'
+"Plug 'mhartington/formatter.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'williamboman/mason.nvim'
 Plug 'ap/vim-css-color'
@@ -84,6 +84,14 @@ set wrapscan
 " }}}
 
 " Keymaps {{{
+
+nnoremap ˜ :lua vim.diagnostic.goto_next()<cr>
+nnoremap π :lua vim.diagnostic.goto_prev()<cr>
+nnoremap ˙ :lua vim.diagnostic.hide()<cr>
+nnoremap ß :lua vim.diagnostic.show()<cr>
+
+nnoremap <silent> <leader>m :!pandoc --embed-resources --standalone -c /Users/philthy/Documents/Notes/pandoc/pandoc.css -o %:p.html %:p 2>/dev/null<cr>
+
 nnoremap <silent> <leader><space> :nohl<cr>
 nnoremap <space> A
 nnoremap sa ggVG
@@ -121,12 +129,12 @@ au TermOpen * setlocal nonumber
 " Disable automatic comments
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-au BufWritePre *.php lua vim.lsp.buf.formatting_sync()
+"au BufWritePre *.php lua vim.lsp.buf.formatting_sync()
 
-augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost * FormatWrite
-augroup END
+"augroup FormatAutogroup
+    "autocmd!
+    "autocmd BufWritePost * FormatWrite
+"augroup END
 
 "hi IncSearch gui=bold guifg=black guibg=yellow
 hi IncSearch cterm=NONE ctermfg=black ctermbg=yellow

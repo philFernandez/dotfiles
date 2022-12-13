@@ -6,6 +6,9 @@
 #                                                        ███████╗███████║██║  ██║██║  ██║╚██████╗
 #                                                        ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
 
+echo "Try zx (already installed) at $(which zx)"
+echo "https://github.com/google/zx#readme"
+
 # p10k Instant Prompt {{{1
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
