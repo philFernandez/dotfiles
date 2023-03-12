@@ -1,8 +1,8 @@
 [init]
 	defaultBranch = main
 [user]
-	name = philFernandez
-	email = norcal618@gmail.com
+	name = Phil Fernandez
+	email = philfernandez@protonmail.com
 
 # Delta diff -----
 [pager]
@@ -35,3 +35,8 @@
 
 [pull]
 	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
