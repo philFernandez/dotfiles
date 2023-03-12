@@ -7,23 +7,11 @@
         "**/.factorypath": true
     },
     // * EDITOR SETTINGS
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontFamily": "VictorMono Nerd Font",
     "editor.suggestSelection": "first",
     "editor.fontSize": 15.7,
     "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": true,
-    // * Color customizations
-    // "workbench.colorCustomizations": {
-    // Sets search highlight for vim 
-    // Vim Search
-    // "editor.findMatchHighlightBackground": "#fcf403",
-    // Vim Incsearch
-    // "editor.findMatchBackground": "#fcf403",
-    // Vim Visual
-    // "editor.selectionBackground": "#069ca1"
-    // },
-    // * TERMINAL SETTINGS
-    "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.fontSize": 15.4,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "terminal.integrated.inheritEnv": false,
@@ -65,10 +53,9 @@
             "icon": "terminal-powershell"
         }
     },
-    // * WORKBENCH SETTINGS
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.productIconTheme": "fluent-icons",
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.productIconTheme": "developer-icons",
+    "workbench.colorTheme": "Bearded Theme Arc",
+    // "workbench.colorTheme": "Bearded Theme Monokai Reversed",
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": false,
@@ -124,12 +111,13 @@
     ],
     "errorLens.enabledDiagnosticLevels": [
         "error",
-        "info"
+        "info",
+        "warning"
     ],
     "explorer.confirmDelete": false,
     "liveServer.settings.donotShowInfoMsg": true,
     "javascript.format.semicolons": "insert",
-    "editor.formatOnSave": true,
+    "vim.foldfix": true,
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "/Users/philthy/.config/vscode_vim/vimrc",
     "vim.searchHighlightColor": "yellow",
@@ -141,22 +129,48 @@
     "vim.leader": ",",
     "vim.showMarksInGutter": true, // :delmarks! to delete all marks
     "cSpell.userWords": [
+        "Appmnt",
+        "APPPATH",
         "arrs",
+        "bgcolor",
+        "classmap",
         "classname",
+        "codeigniter",
+        "CURLAUTH",
+        "CURLOPT",
+        "disp",
+        "Divs",
         "dlat",
         "esbuild",
+        "Flintstone",
         "fname",
         "gocode",
+        "HTTPAUTH",
+        "httponly",
         "Idxs",
         "Janky",
+        "mang",
+        "mybox",
         "nums",
+        "overriden",
+        "overscroll",
         "pacman",
+        "palegreen",
         "phillearnsgo",
+        "Philthy",
+        "popperjs",
+        "pqdev",
         "proto",
         "protobuf",
         "protoc",
         "protoimpl",
+        "RETURNTRANSFER",
+        "skyblue",
         "SYSTEMPATH",
+        "tabindex",
+        "tailwindcss",
+        "Thingie",
+        "USERPWD",
         "WASD"
     ],
     "workbench.startupEditor": "none",
@@ -168,10 +182,34 @@
         "proto3"
     ],
     "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
     // "code-runner.executorMap": {
     //     "python": "python3 -u",
     // },
     "vsicons.dontShowNewVersionMessage": true,
     // Turn of the Trust blah blah warning thing
-    "security.workspace.trust.enabled": false
+    "security.workspace.trust.enabled": false,
+    "workbench.iconTheme": "vscode-icons",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "typescript.format.semicolons": "insert",
+    "editor.minimap.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "errorLens.enabled": false,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "redhat.telemetry.enabled": false,
+    "gitlens.views.commitDetails.files.layout": "list",
+    "[python]": {
+        "editor.formatOnType": true
+    },
 }

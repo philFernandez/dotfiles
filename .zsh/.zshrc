@@ -75,6 +75,8 @@ export RANGER_LOAD_DEFAULT_RC=false
 export HISTSIZE=500000
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export EDITOR=nvim
+export GOARCH=arm64
+export GOOS=darwin
 export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD 2> /dev/null || fd . -HI)'
 export FZF_DEFAULT_OPTS="--color=hl:120,gutter:35,\
 pointer:220,hl+:118,fg:251,fg+:bright-blue,\
