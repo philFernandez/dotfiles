@@ -100,7 +100,7 @@ source $HOME/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/plugins/powerlevel10k/powerlevel9k.zsh-theme
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $HOME/.zsh/plugins/dircolors
 source $HOME/.zsh/plugins/colored-man-pages/colored-man-pages.zsh
 if [[ $TERM_PROGRAM == 'vscode' ]]; then
