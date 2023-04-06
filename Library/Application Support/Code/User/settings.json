@@ -164,7 +164,9 @@
         "protobuf",
         "protoc",
         "protoimpl",
+        "psycopg",
         "RETURNTRANSFER",
+        "sessid",
         "skyblue",
         "SYSTEMPATH",
         "tabindex",
@@ -187,6 +189,7 @@
     // "code-runner.executorMap": {
     //     "python": "python3 -u",
     // },
+    "remote.restoreForwardedPorts": true,
     "vsicons.dontShowNewVersionMessage": true,
     // Turn of the Trust blah blah warning thing
     "security.workspace.trust.enabled": false,

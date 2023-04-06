@@ -75,5 +75,15 @@
     {
         "key": "cmd+e cmd+p",
         "command": "sqltools.executeCurrentQuery"
+    },
+    {
+        "key": "cmd+ctrl+j",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+k",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
     }
 ]
