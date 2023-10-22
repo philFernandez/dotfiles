@@ -1,6 +1,8 @@
 # Aliases {{{1
 # Misc {{{2
 alias rga='rg --no-ignore -ia 2>/dev/null'
+alias obsp='(cd /Users/philthy/Documents/Obsidian\ Vault && git fetch && git pull)'
+alias obs='(cd /Users/philthy/Documents/Obsidian\ Vault && git add . && git commit -am macbook && git push)'
 alias tree='tree --dirsfirst -A'
 alias reload='exec zsh'
 alias q='exit'

@@ -54,7 +54,7 @@
         }
     },
     "workbench.productIconTheme": "developer-icons",
-    "workbench.colorTheme": "Bearded Theme Arc",
+    "workbench.colorTheme": "Bearded Theme Monokai Reversed",
     // "workbench.colorTheme": "Bearded Theme Monokai Reversed",
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
@@ -125,7 +125,7 @@
     "vim.hlsearch": true,
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
-    "vim.highlightedyank.duration": 400,
+    "vim.highlightedyank.duration": 100,
     "vim.leader": ",",
     "vim.showMarksInGutter": true, // :delmarks! to delete all marks
     "cSpell.userWords": [
@@ -177,6 +177,7 @@
         "tabindex",
         "tailwindcss",
         "Thingie",
+        "userid",
         "USERPWD",
         "WASD"
     ],
@@ -196,15 +197,24 @@
     // },
     "remote.restoreForwardedPorts": true,
     "vsicons.dontShowNewVersionMessage": true,
-    // Turn of the Trust blah blah warning thing
+    // Turn off the Trust blah blah warning thing
     "security.workspace.trust.enabled": false,
     "workbench.iconTheme": "vscode-icons",
     "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": true
+    },
+    "[cpp]" : {
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": true
     },
     "explorer.confirmDragAndDrop": false,
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": true
     },
     "typescript.format.semicolons": "insert",
     "editor.minimap.enabled": false,
@@ -216,8 +226,13 @@
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "redhat.telemetry.enabled": false,
-    "gitlens.views.commitDetails.files.layout": "list",
     "[python]": {
         "editor.formatOnType": true
     },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 }
