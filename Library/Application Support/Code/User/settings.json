@@ -129,6 +129,7 @@
     "vim.leader": ",",
     "vim.showMarksInGutter": true, // :delmarks! to delete all marks
     "cSpell.userWords": [
+        "anims",
         "Appmnt",
         "APPPATH",
         "arrs",
@@ -142,9 +143,11 @@
         "disp",
         "Divs",
         "dlat",
+        "ERRMODE",
         "esbuild",
         "Flintstone",
         "fname",
+        "freeside",
         "gocode",
         "godotenv",
         "HTTPAUTH",
@@ -173,9 +176,11 @@
         "RETURNTRANSFER",
         "sessid",
         "skyblue",
+        "spritesheet",
         "SYSTEMPATH",
         "tabindex",
         "tailwindcss",
+        "textbox",
         "Thingie",
         "userid",
         "USERPWD",
@@ -214,7 +219,9 @@
     "explorer.confirmDragAndDrop": false,
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
     },
     "typescript.format.semicolons": "insert",
     "editor.minimap.enabled": false,
@@ -234,5 +241,7 @@
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "sqltools.highlightQuery": false,
+    "sqltools.results.reuseTabs": "connection",
 }

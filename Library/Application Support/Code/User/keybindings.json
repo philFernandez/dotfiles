@@ -73,7 +73,7 @@
         "when": "fileMatchOrMatchFocus && searchViewletVisible"
     },
     {
-        "key": "cmd+e cmd+p",
+        "key": "cmd+enter",
         "command": "sqltools.executeCurrentQuery"
     },
     {
